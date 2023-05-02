@@ -1,4 +1,3 @@
-```markdown
 ---
 maxWidth: 600
 ---
@@ -16,4 +15,3 @@ maxWidth: 600
 ## **CS MORALE** <br> = *CS du bien *<br>*et du mal*
 - = être auteur et <br>responsable <br>de ses actes
 - CONTRAIRE : <br> **L'inconscience (folie)** <br> **L'Inconscient (le *Ça*)**
-```
