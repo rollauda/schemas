@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"La Justice","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4],"fold":1},"content":"Un sentiment moral <br> = la <mark>légitimité</mark> <!-- fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[5,6]},"content":"<strong>Légitime</strong> = ce que commande <br> la justice selon la morale","children":[]},{"type":"heading","depth":2,"payload":{"lines":[7,8]},"content":"être traité avec <mark>équité</mark> <br> (= <strong>à chacun son dû</strong>) <br> (exemple: le salaire, les notes)","children":[]},{"type":"heading","depth":2,"payload":{"lines":[9,10]},"content":"être traité à <mark>égalité</mark> <br> (= <strong>à chacun la même part</strong>) <br> (exemple: le droit au respect)","children":[]},{"type":"heading","depth":2,"payload":{"lines":[11,12],"fold":1},"content":"<strong>Aristote</strong> : <!-- fold-->","children":[{"type":"list_item","depth":3,"payload":{"lines":[13,14]},"content":"<mark>Justice distributive</mark> <br> (= <strong>l'équité</strong>)","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[14,15]},"content":"<mark>ustice commutative</mark> <br> (= <strong>l'égalité</strong>)","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[16,17],"fold":1},"content":"Une institution publique <br> = la <mark>légalité</mark>  <!-- fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[18,19]},"content":"<strong>Légal</strong> = ce que le Droit <br> objectif préscrit","children":[]},{"type":"heading","depth":2,"payload":{"lines":[20,21]},"content":"<strong>Justice</strong>: système judiciaire <br> qui fait respecter la loi <br> (les tribunaux, la police)","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[22,23],"fold":1},"content":"Droit et Justice morale <br> = légal VS légitime <!-- fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[24,25]},"content":"La loi est parfois moralement injuste <br> (exemple: ségrégation raciale)","children":[]},{"type":"heading","depth":2,"payload":{"lines":[26,27]},"content":"Des actes justes peuvent être illégaux <br> (exemple: protéger des Juifs <br>pendant la 2e GM)","children":[{"type":"fence","depth":3,"content":"<pre><code></code></pre>\n","children":[],"payload":{"lines":[27,28]}}]}]}]},{})</script>
+</body>
+</html>
