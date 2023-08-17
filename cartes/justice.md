@@ -13,10 +13,7 @@ maxWidth: 600
 
 ### être traité à ==égalité== <br> (= **à chacun la même part**) <br> (exemple: le droit au respect)
 
-### **Aristote** : <!-- fold-->
 
-- ==Justice distributive== <br> (= **l'équité**)
-- ==ustice commutative== <br> (= **l'égalité**)
 
 ## Une institution publique <br> = la ==légalité==  <!-- fold-->
 
@@ -29,4 +26,4 @@ maxWidth: 600
 ### La loi est parfois moralement injuste <br> (exemple: ségrégation raciale)
 
 ### Des actes justes peuvent être illégaux <br> (exemple: protéger des Juifs <br>pendant la 2e GM)
-```
+

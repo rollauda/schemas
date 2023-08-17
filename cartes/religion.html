@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1],"fold":1},"content":"<strong>Pourquoi y a-t-il <br> des religions ?</strong> <!-- fold-->","children":[{"type":"list_item","depth":1,"payload":{"lines":[1,2],"fold":1},"content":"Raison psychologique  <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[2,3]},"content":"L'humain seul dans le monde","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[3,4]},"content":"Peur de la mort","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[4,5]},"content":"Besoin infantile <br> de protection (Freud)","children":[]}]},{"type":"list_item","depth":1,"payload":{"lines":[5,6],"fold":1},"content":"Raison métaphysique <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[6,7]},"content":"Comprendre le monde <br> =&gt; présupposé : l'invisible  <br> à l'origine du visible","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[7,8]},"content":"Expliquer cet invisible <br> Ex: qu'y a-t-il après la mort ?","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"Donner un sens à l'existence humaine <br> - Qu'est-ce que l'homme ? <br> - Quelle est sa nature, sa fonction ?","children":[]}]},{"type":"list_item","depth":1,"payload":{"lines":[9,10],"fold":1},"content":"Raison morale <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[10,11]},"content":"Expliquer le mal","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[11,12]},"content":"Punitions / récompenses <br> enfer / paradis","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[12,13]},"content":"=&gt; Justice divine supérieure <br> à la justice humaine","children":[]}]}]},{})</script>
+</body>
+</html>

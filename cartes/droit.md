@@ -1,4 +1,3 @@
-```markdown
 ---
 maxWidth: 600
 
@@ -8,7 +7,7 @@ maxWidth: 600
 
 ## Le Droit objectif <!-- fold-->
 
-### Ensemble des règles qui régissent les rapports <br> entre les différentes composantes d’une société. <!-- fold-->
+### Ensemble des règles qui régissent les rapports <br> entre les différentes composantes d’une société <!-- fold-->
 
 #### = le domaine de la ==légalité== : <br> les lois écrites dans les différents <br> codes (pénal, civil, etc.)
 
@@ -25,13 +24,12 @@ maxWidth: 600
 ### Les droits qu'un individu possède <br>  au sein d'une société <!-- fold-->
 
 - = des ==libertés== que la loi <br>  nous donne (le "**droit de**") <br>  Exemple : liberté d'expression, <br>  droit de réunion 
-- = des ==revendications== autorisées <br>  par la loi (le "droit à") <br>  Exemple : droit à l'éducation,<br>  droit à la santé 
+- = des ==revendications== autorisées <br>  par la loi (le "**droit à**") <br>  Exemple : droit à l'éducation,<br>  droit à la santé 
 
-### Ces droits subjectifs sont inscrits dans le Droit objectif
+### Ces droits subjectifs sont inscrits <br> dans le Droit objectif
 
 ### Contrepartie : des devoirs <br> imposés par la loi  <!-- fold-->
 
 - Les ==obligations== juridiques <br> (scolarité    obligatoire, assistance <br>à personne en danger, etc.)
 
 - Les ==interdictions== (tout ce <br>que la  loi empêche de faire)
-```
