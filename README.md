@@ -1,4 +1,6 @@
-| [retour accueil](https://rollauda.github.io) | [leçons philo](https://rollauda.github.io/philogt) | [leçons HLP](https://rollauda.github.io/hlpt) |
+| [retour accueil](https://rollauda.github.io) | [leçons philo](https://rollauda.github.io/philogt) | [leçons HLP](https://rollauda.github.io/hlpt) | [leçons DGEMC](https://rollauda.github.io/dgemc) | [leçons CAV](https://rollauda.github.io/cav1) |
+
+
 
 | Schémas   | Cours   |  
 |:-------------- |:--------------  
@@ -7,3 +9,4 @@
 |  [La justice](https://rollauda.github.io/schemas/cartes/justice.html)  | `philo` & `DGEMC` | 
 |  [La conscience](https://rollauda.github.io/schemas/cartes/conscience.html)  |  `philo`  |
 |  [La religion](https://rollauda.github.io/schemas/cartes/religion.html)  |  `philo`  |
+| [Plaisir, joie, bonheur](https://rollauda.github.io/schemas/cartes/plaisir-joie-bonheur.html) | `philo`  |
