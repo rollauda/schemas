@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2],"fold":1},"content":"Sanctions <br> Juridiques <!--fold-->","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4],"fold":1},"content":"Contrainte directe <!--fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[5,6]},"content":"= usage de la force  <br> par la police","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[7,8],"fold":1},"content":"Nullité <!--fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[9,10]},"content":"= suppression d'un acte","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[11,12],"fold":1},"content":"Condamnation <!--fold-->","children":[{"type":"heading","depth":2,"payload":{"lines":[13,14],"fold":1},"content":"Responsabilité civile <!--fold-->","children":[{"type":"heading","depth":3,"payload":{"lines":[14,15]},"content":"Dommages et intérêts:  <br>  une &quot;réparation&quot;   <br> à la victime","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[16,17],"fold":1},"content":"Responsabilité pénale <br> (des &quot;peines&quot;) <!--fold-->","children":[{"type":"heading","depth":3,"payload":{"lines":[17,18]},"content":"Incarcération  <br> (peine de prison)","children":[]},{"type":"heading","depth":3,"payload":{"lines":[18,19]},"content":"Amendes  <br> (argent versé au  <br> trésor Public)","children":[]}]}]}]},{})</script>
+</body>
+</html>

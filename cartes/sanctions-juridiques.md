@@ -1,4 +1,3 @@
-```markdown
 ---
 maxWidth: 600
 ---
@@ -21,4 +20,3 @@ maxWidth: 600
 ### Responsabilité pénale <br> (des "peines") <!--fold-->
 #### Incarcération  <br> (peine de prison)
 #### Amendes  <br> (argent versé au  <br> trésor Public)
-```
