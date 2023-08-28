@@ -5,6 +5,7 @@
 | Schémas   | Cours   |  
 |:-------------- |:--------------  
 | [Les sciences](https://rollauda.github.io/schemas/cartes/sciences.html) | `philo`  |
+| [La Raison](https://rollauda.github.io/schemas/cartes/raison.html) | `philo`  |
 | [Plaisir, joie, bonheur](https://rollauda.github.io/schemas/cartes/plaisir-joie-bonheur.html) | `philo`  |
 | [Le temps](https://rollauda.github.io/schemas/cartes/temps.html) | `philo`  |
 |  [La religion](https://rollauda.github.io/schemas/cartes/religion.html)  |  `philo`  |
