@@ -1,4 +1,3 @@
-```markdown
 ---
 maxWidth: 600
 ---
@@ -17,4 +16,3 @@ maxWidth: 600
 ## il change <br> les choses <!--fold-->
 - le temps qui passe  <br>à un effet sur les choses  <br>(usure, vieillisement)
 - = le "**devenir"** (contraire de  **"l'être"**) : <br> toute chose qui existe réellement <br> est soumise à l'usure du temps
-```

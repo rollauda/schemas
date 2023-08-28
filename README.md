@@ -10,3 +10,4 @@
 |  [La conscience](https://rollauda.github.io/schemas/cartes/conscience.html)  |  `philo`  |
 |  [La religion](https://rollauda.github.io/schemas/cartes/religion.html)  |  `philo`  |
 | [Plaisir, joie, bonheur](https://rollauda.github.io/schemas/cartes/plaisir-joie-bonheur.html) | `philo`  |
+| [Le temps](https://rollauda.github.io/schemas/cartes/temps.html) | `philo`  |
