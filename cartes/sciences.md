@@ -7,7 +7,7 @@ maxWidth: 600
   - **<u>objet</u>** : des idées
   - **<u>but</u>** : découvrir <br>des vérités de raison
   - 1: partent d'axiomes <br>et postulats
-  - 2: font des déductions
+  - 2: font des démonstrations,<br> des déductions
 - **Sciences expérimentales** <br> (ou **de la nature** : <br> biologique, <br> physique, chimie, etc.) <!--fold-->
     - **<u>objet</u>** : des faits naturels
     - **<u>but</u>** : découvrir <br>des lois de la nature
