@@ -1,22 +1,22 @@
 ---
 maxWidth: 600
 ---
-# **Les sciences <br> (du latin *scientia* : <br> connaissance, <br> savoir)**
-- **But** : expliquer <u>comment</u> <br> fonctionne le monde <br> => découvrir des lois <br> (de la nature et de la raison) 
-- **Sciences formelles** <br> (mathématiques, <br> logique)
-  - <u>objet</u> : des idées
-  - <u>but</u> : découvrir <br>des vérités de raison
-  - partent d'axiomes <br>et postulats
-  - font des déductions
-- **Sciences expérimentales** <br> (ou de la nature : <br> biologique, <br> physique, chimie, etc.)
-    - <u>objet</u> : des faits naturels
-    - <u>but</u> : découvrir <br>des lois de la nature
-    - partent d'observations
-    - émettent des hypothèses
-    - expérimentent pour prouver <br>ces hypothèses
-- **Sciences humaines** <br> (anthropologie, sociologie,<br> économie, histoire, etc.)
-    - <u>objet</u> : des faits humains
-    - <u>but</u> : comprendre les<br> comportements humains
-    - même démarche que <br>les sciences de la nature...
+# **Les sciences <br> (du latin *scientia* : <br> connaissance, <br> savoir)** <!--fold-->
+- **But** : expliquer <u>comment</u> <br> fonctionne le monde <br> => découvrir des lois
+- **Sciences formelles** <br> (mathématiques, <br> logique) <!--fold-->
+  - **<u>objet</u>** : des idées
+  - **<u>but</u>** : découvrir <br>des vérités de raison
+  - 1: partent d'axiomes <br>et postulats
+  - 2: font des déductions
+- **Sciences expérimentales** <br> (ou **de la nature** : <br> biologique, <br> physique, chimie, etc.) <!--fold-->
+    - **<u>objet</u>** : des faits naturels
+    - **<u>but</u>** : découvrir <br>des lois de la nature
+    - 1: partent d'observations
+    - 2: émettent des hypothèses
+    - 3: expérimentent pour prouver <br>ces hypothèses
+- **Sciences humaines** <br> (anthropologie, sociologie,<br> économie, histoire, etc.) <!--fold-->
+    - **<u>objet</u>** : des faits humains
+    - **<u>but</u>** : comprendre les<br> comportements humains
+    - → même démarche que <br>les sciences de la nature...
     - ... mais prennent en compte <br>la liberté humaine
     - => lois statistiques
