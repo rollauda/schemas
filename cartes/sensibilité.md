@@ -9,10 +9,10 @@ maxWidth: 600
   - Mènent à une connaissance objective (empirique)
 - **Sensations internes** <!--fold-->
   - Causées par nos organes
-  - Provoquent une réaction
+  - Provoquent une réaction sensible
   - Plaisir / Douleur
   - Subjectivité (car sensation interne) <br> et objectivité (car signes extérieurs)
 - **Sentiments, Affects** <!--fold-->
-  - Sentiments, émotions, humeurs, passions...
+  - Émotions, humeurs, passions...
   - <u>Exemples</u> : amour, haine, <br> tristesse, joie, pitié, etc.
   - Difficiles à transformer en connaissance <br> (Car subjectifs et indicibles)
