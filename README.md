@@ -11,7 +11,8 @@
 | [L'image du pendule (Schopenhauer)](https://rollauda.github.io/schemas/cartes/pendule.png) | `philo`  |
 | [Plaisir, joie, bonheur](https://rollauda.github.io/schemas/cartes/plaisir-joie-bonheur.html) | `philo`  |
 | [Le temps](https://rollauda.github.io/schemas/cartes/temps.html) | `philo`  |
-| [La religion](https://rollauda.github.io/schemas/cartes/religion.html)  |  `philo`  |
+| [Définition de la religion](https://rollauda.github.io/schemas/cartes/religion-definition.html)  |  `philo`  |
+| [Les fonctions de la religion](https://rollauda.github.io/schemas/cartes/religion-fonctions.html)  |  `philo`  |
 | [Le droit](https://rollauda.github.io/schemas/cartes/droit.html) | `philo` & `DGEMC` |
 | [La justice](https://rollauda.github.io/schemas/cartes/justice.html)  | `philo` & `DGEMC` | 
 | [Les sanctions juridiques](https://rollauda.github.io/schemas/cartes/sanctions-juridiques.html)  | `DGEMC` | 
