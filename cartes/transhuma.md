@@ -12,6 +12,8 @@ maxWidth: 600
  - Quête de l'immortalité : <br>cryogénisation, duplication <br> Uploading (numérisation du contenu du cerveau)
 
  ### L'IA : augmenter l'intelligence humaine
+- amélioration technologique des capacités intellectuelles humaines
+- coopération avec des robots intelligents, réels ou virtuels
 
  ### Eugénisme : améliorer l'espèce
  - DPI (Diagnostique Pré-implantatoire)
