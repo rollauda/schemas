@@ -20,3 +20,4 @@
 | [Langage et communication](https://rollauda.github.io/schemas/cartes/langage.html) | `philo` & `HLP` | 
 | [Les caractéristiques du moi](https://rollauda.github.io/schemas/cartes/moi.html) | `HLP` & `philo` | 
 | [La sensibilité](https://rollauda.github.io/schemas/cartes/sensibilite.html) | `HLP` | 
+| [La nature](https://rollauda.github.io/schemas/cartes/nature.html)  |  `philo`  |
