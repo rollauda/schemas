@@ -11,7 +11,8 @@ maxWidth: 600
   - Les hommes obéissent à des **lois naturelles**  <br> qui justifient leurs comportements  <br> (<u>Exemple</u> : la légitime défense)
   - **<u>Nature ≠ Culture</u>** (l'ensemble des caractéristiques <br> humaines  **acquises** au cours de son histoire :  <br> l'éducation, la morale, la politique, etc.)
 - **3. <u>La nature d'une chose</u>**, son **essence**, ce qui la définit <!--fold-->
-   - L'essence d'une chose est l'ensemble des  **<u>caractéristiques  intemporelles <br> et universelles</u>** qui la définissent   et la distinguent des autres choses
+   - L'essence d'une chose est l'ensemble des  **<u>caractéristiques <br> intemporelles et universelles</u>** qui la définissent  <br> et la distinguent des autres choses
+   - **Aristote** : les choses se définissent par <br> "*genre prochain*" et "*différence spécifique*"
    - Pour l'homme, on parle de **"Nature humaine"**
-   - <u>Exemple</u> : « *La raison est le propre de l'homme* » (Aristote)<br> = la raison est présente chez tous les humains<br> et absente des autres animaux.
+   - <u>Exemple</u> : « *L'homme est un animal politique* » (Aristote)<br> - animal = le genre prochain <br> - politique = la différence spécifique <br> (car absente chez les autres animaux).
    - **<u>Essence (nature) ≠ Accident</u>** (les caractéristiques accidentelles,<br> non-essentielles d'une chose, qui ne la définissent pas). <br>(<u>Exemple</u> : l'origine sociale, la couleur de peau, le niveau <br> d'éducation ne me définissent pas en tant qu'être humain)
