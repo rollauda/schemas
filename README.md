@@ -24,3 +24,6 @@
 | [Liberté et déterminisme](https://rollauda.github.io/schemas/cartes/liberte-determinisme.html)  |  `philo`  |
 | [La liberté selon Descartes](https://rollauda.github.io/schemas/cartes/liberte-indifference.html)  |  `philo`  |
 | [≠ genres de liberté (Leibniz)](https://rollauda.github.io/schemas/cartes/liberte-leibniz.html)  |  `philo`  |
+| [Caractéristiques du Moi](https://rollauda.github.io/schemas/cartes/moi.html)  |  `philo`  |
+| [L'inconscient](https://rollauda.github.io/schemas/cartes/inconscient.html)  |  `philo`  |
+| [Déterminismes inconscients](https://rollauda.github.io/schemas/cartes/determinisme-ics.html)  |  `philo`  |

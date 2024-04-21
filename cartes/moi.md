@@ -1,7 +1,7 @@
 ---
 maxWidth: 600
 ---
-# Les caractéristiques <br> du moi
+# **Les caractéristiques <br> du Moi**
 - **Permanence** <br> (ou ipséité) <!--fold-->
   - Je reste moi-même malgré les changements <br> dûs au temps qui passe
   - **Problème** : suis-je le même à travers le temps ?
