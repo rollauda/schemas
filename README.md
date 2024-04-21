@@ -21,3 +21,6 @@
 | [Les caractéristiques du moi](https://rollauda.github.io/schemas/cartes/moi.html) | `HLP` & `philo` | 
 | [La sensibilité](https://rollauda.github.io/schemas/cartes/sensibilite.html) | `HLP` | 
 | [La nature](https://rollauda.github.io/schemas/cartes/nature.html)  |  `philo`  |
+| [Liberté et déterminisme](https://rollauda.github.io/schemas/cartes/liberte-determinisme.html)  |  `philo`  |
+| [La liberté selon Descartes](https://rollauda.github.io/schemas/cartes/liberte-indifference.html)  |  `philo`  |
+| [≠ genres de liberté (Leibniz)](https://rollauda.github.io/schemas/cartes/liberte-leibniz.html)  |  `philo`  |
