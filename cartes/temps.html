@@ -16,11 +16,11 @@
   height: 100vh;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
                 setTimeout(r);
               })(() => {
   const {
@@ -32,9 +32,13 @@
   } = markmap.Toolbar.create(mm);
   el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
   document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
-          const markmap = getMarkmap();
-          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
-        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"Le temps","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4],"fold":1},"content":"unidirectionnel... <!--fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[5,6]},"content":"le temps s'écoule <br> dans une seule <br> direction","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[6,7]},"content":"= <strong>flèche du temps</strong> :  <br>il vient du <strong>futur</strong>,  <br>passe par le <strong>présent</strong>,  <br>se perd dans le <strong>passé</strong>","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[8,9],"fold":1},"content":"irreversible... <!--fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[9,10]},"content":"On ne peut inverser  <br>le court du temps","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[10,11]},"content":"pas de machine à  <br>remonter le temps","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[12,13],"fold":1},"content":"il change <br> les choses <!--fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[13,14]},"content":"le temps qui passe  <br>à un effet sur les choses  <br>(usure, vieillisement)","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[14,15]},"content":"= le &quot;<strong>devenir&quot;</strong> (contraire de  <strong>&quot;l'être&quot;</strong>) : <br> toute chose qui existe réellement <br> est soumise à l'usure du temps","children":[]}]}]},{})</script>
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"LE TEMPS","children":[{"content":"Unidirectionnel... <!--fold-->","children":[{"content":"Le temps s'écoule dans <br> une seule direction","children":[],"payload":{"lines":"5,6"}},{"content":"= <strong>flèche du temps</strong> :<br> il vient du <strong>futur</strong>,  <br>passe par le <strong>présent</strong>,  <br>se perd dans le <strong>passé</strong>","children":[],"payload":{"lines":"6,8"}}],"payload":{"lines":"3,4"}},{"content":"Irréversible... <!--fold-->","children":[{"content":"On ne peut inverser le court du temps","children":[],"payload":{"lines":"9,10"}},{"content":"(pas de machine à remonter le temps)","children":[],"payload":{"lines":"10,12"}}],"payload":{"lines":"8,9"}},{"content":"Il est du <em>devenir</em>  <!--fold-->","children":[{"content":"Le temps qui passe à un effet sur les choses, <br> il les transforme (usure, vieillisement)","children":[],"payload":{"lines":"13,14"}},{"content":"= le \"<strong>devenir\"</strong>, ce qui change sans cesse <br> (contraire de  <strong>\"l'être\"</strong>, ce qui ne change pas)","children":[],"payload":{"lines":"14,15"}}],"payload":{"lines":"12,13"}}],"payload":{"lines":"1,2"}},{})</script>
 </body>
 </html>
