@@ -10,7 +10,7 @@ maxWidth: 600
 - = **flèche du temps** :<br> il vient du **futur**,  <br>passe par le **présent**,  <br>se perd dans le **passé**
 
 ## Irréversible... <!--fold-->
- - On ne peut inverser le court du temps
+ - On ne peut inverser le cours du temps
  - (pas de machine à remonter le temps)
 
 ## Il est du *devenir*  <!--fold-->
