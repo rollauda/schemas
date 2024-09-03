@@ -1,4 +1,7 @@
 ---
+title: markmap
+markmap:
+  initialExpandLevel: 2
 maxWidth: 600
 ---
 # **Les caractéristiques <br> du Moi**
