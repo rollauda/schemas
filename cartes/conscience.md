@@ -1,4 +1,7 @@
 ---
+title: Conscience
+markmap:
+  initialExpandLevel: 2
 maxWidth: 600
 ---
 
