@@ -9,7 +9,7 @@ maxWidth: 600
   - **Libéralisme** <br> (Équité > Égalité) <!--fold-->
     - **Équité** : laisser chacun développer librement <br>ses talents et obtenir ce qu'il mérite
     - *Égalité formelle : de droits et de chances*
-    - Liberté individuelle > Égalité sociale
+    - Individu > Société
     - **=> État libéral** <br> (intervient peu dans la société)
   - **Libertarisme** <br> (anarchisme de droite)
     - Liberté individuelle totale
@@ -20,7 +20,7 @@ maxWidth: 600
   - **Socialisme** <br> (Égalité > Équité)<!--fold-->
     - **Égalité réelle** : viser l'égalité de conditions <br>par des politiques redistributives 
     - *Équité : préserver les libertés individuelles*
-    -  Égalité sociale > Liberté individuelle
+    -  Société > Individu
     - **=> État Providence** <br> (interventionnisme : impôts, redistribution, etc.)
   - **Communisme...**
     - **... marxiste**
@@ -30,9 +30,11 @@ maxWidth: 600
       - Révolution
       - Société sans État <br> (« *Ni Dieu, ni maître* »)
       - **Libre-association** <br> (coopératives, fédérations)
+- **Utilitarisme**
 - **Reposant sur la <br>reconnaissance**
   - **Communautarisme** <!--fold-->
-    - Petit-fils 1 <br> passage ligne
+    - Défense du particularisme : une société <br> est la somme de communautés culturelles ≠
+    - => critique de l'universalisme des lois : les lois <br>doivent prendre en compte les ≠ traditions culturelles
     - Politiques de quotas
   - **Féminisme**
     - Petit-fils 3

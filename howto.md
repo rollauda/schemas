@@ -1,5 +1,5 @@
 - modifier le readme
 - commande+maj+p : html (markdown all in one)
-- dans le readme.md, changer la balise du tableau :
+- dans le readme.html, changer la balise du tableau :
   - <table style="border-collapse: collapse; width: 100%; font-size: 16px;">
 - renommer le readme.html en index.html
