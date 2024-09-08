@@ -7,13 +7,13 @@ maxWidth: 600
 # **Théories de la justice**
 - **Reposant d'abord <br>sur l'équité (= Droite)**
   - **Libéralisme** <br> (Équité > Égalité) <!--fold-->
-    - **Équité** : laisser chacun développer  librement <br>ses talents et obtenir ce qu'il mérite
+    - **Équité** : laisser chacun développer librement <br>ses talents et obtenir ce qu'il mérite
     - *Égalité formelle : de droits et de chances*
     - Liberté individuelle > Égalité sociale
-    - **=> État libéral**
+    - **=> État libéral** <br> (intervient peu dans la société)
   - **Libertarisme** <br> (anarchisme de droite)
     - Liberté individuelle totale
-    - Inégalités naturelles et sociales légitimes
+    - Maintient des inégalités naturelles
     - Pas d'égalité de droits ou de chances
     - **=> État Régalien** <br> (Minimal : Justice et Police) 
 - **Reposant d'abord <br>sur l'égalité (= Gauche)**
@@ -21,7 +21,7 @@ maxWidth: 600
     - **Égalité réelle** : viser l'égalité de conditions <br>par des politiques redistributives 
     - *Équité : préserver les libertés individuelles*
     -  Égalité sociale > Liberté individuelle
-    - **=> État Providence**
+    - **=> État Providence** <br> (interventionnisme : impôts, redistribution, etc.)
   - **Communisme...**
     - **... marxiste**
       - **Etape 1 : socialisme** (Révolution,  <br> Dictature du prolétariat, Égalitarisme)
