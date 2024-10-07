@@ -12,7 +12,7 @@ maxWidth: 600
   - l'Etat a le monopole de l'usage de la force (police, tribunaux)
   - Différence vengeance / punition : on ne se fait pas justice soi-même
 - **Justice distributive** <br> (Distributions sociale des biens (revenus, propriétés, etc.) : <br> donner à chacun la part qui lui revient)
-  - **Égalité de conditions** (*« À chacun la même part »*) <br> Sociétés égalitaristes : recherche d'une égalité réelle, politiques de redistribution
-  - **Équité** (*« À chacun son dû »*) <br> Sociétés méritocratiques : distribution des biens selon les mérites de chacun
+  - **Égalité de conditions** (*« À chacun la même part »*) <br> Sociétés égalitaristes : recherche d'une égalité réelle, politiques de redistribution pour corriger les inégalités
+  - **Équité** (*« À chacun son dû »*) <br> Sociétés méritocratiques : distribution inégale des biens selon les mérites de chacun
   - **Utilité** (*Maximiser le bonheur*) <br> Sociétés utilitaristes : la distribution peut être inégale <br> si elle améliore la somme totale de bonheur collectif
 
