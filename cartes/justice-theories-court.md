@@ -12,5 +12,5 @@ maxWidth: 600
   - **Socialisme** : Égalité réelle => État Providence <br> (interventionnisme : impôts, redistribution, etc.)
   - **Communisme et anarchisme** : <br> égalitarisme, société sans État
 - **Reposant sur la <br>reconnaissance**
-  - **Communautarisme** : prise en compte des différences culturelles
-  - **Féminisme** : correction des déséquilibres de pouvoir homme / femme
+  - **Communautarisme** : prise en compte <br> des différences culturelles
+  - **Féminisme** : correction des déséquilibres <br> de pouvoir homme / femme
