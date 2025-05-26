@@ -1,19 +1,28 @@
 ---
+title: markmap
+markmap:
+  initialExpandLevel: 2
 maxWidth: 600
 ---
 # **Les sciences <br> (du latin *scientia* : <br> connaissance, <br> savoir)** <!--fold-->
-- **But** : expliquer <u>comment</u> <br> fonctionne le monde <br> => découvrir des lois
-- **Sciences formelles** <br> (mathématiques, <br> logique) <!--fold-->
-  - **<u>objet</u>** : des idées
-  - **<u>but</u>** : découvrir <br>des vérités de raison
-  - 1: partent d'axiomes <br>et postulats
-  - 2: font des démonstrations,<br> des déductions
-- **Sciences expérimentales** <br> (ou **de la nature** : <br> biologique, <br> physique, chimie, etc.) <!--fold-->
-    - **<u>objet</u>** : des faits naturels
-    - **<u>but</u>** : découvrir <br>des lois de la nature
-    - 1: partent d'observations
-    - 2: émettent des hypothèses
-    - 3: expérimentent pour prouver <br>ces hypothèses
+- **- But** : La vérité (expliquer <u>**comment**</u> fonctionne le monde => découvrir des lois) <br> **- Moyen** : utiliser des méthodes de recherche rationnelles, objectives
+- **Sciences formelles** <br> (mathématiques, logique) <!--fold-->
+  - **<u>objet</u>** : des idées (nombres, formes, symboles, etc.)
+  - **<u>but</u>** 
+    - -> découvrir **des vérités de raison** (vérité-cohérence)
+    - -> comprendre le fonctionnement de la raison humaine
+  - **<u>méthode</u> hypothético-déductive**
+    - 1: partent d'axiomes <br>et postulats
+    - 2: font des démonstrations,<br> des déductions
+- **Sciences expérimentales** <br> (ou **sciences de la nature** : <br> biologique, physique, etc.) <!--fold-->
+    - **<u>objet</u>** : des faits naturels (matière, vie, etc.)
+    - **<u>but</u>** : 
+      - -> découvrir **des vérités de fait** (vérité-adéquation)
+      - -> formuler des lois de la nature <br>(l'explication de la régularité des phénomènes naturels)
+    - **<u>méthode</u> expérimentale**
+      - 1: partent d'observations
+      - 2: émettent des hypothèses
+      - 3: expérimentent pour prouver <br>ces hypothèses
 - **Sciences humaines** <br> (anthropologie, sociologie,<br> économie, histoire, etc.) <!--fold-->
     - **<u>objet</u>** : des faits humains
     - **<u>but</u>** : comprendre les<br> comportements humains
