@@ -17,6 +17,7 @@
 | [La justice](https://rollauda.github.io/schemas/cartes/justice.html)  | `philo` & `DGEMC` | 
 | [Les sanctions juridiques](https://rollauda.github.io/schemas/cartes/sanctions-juridiques.html)  | `DGEMC` | 
 | [La conscience](https://rollauda.github.io/schemas/cartes/conscience.html)  |  `philo`  |
+| [La parole](https://rollauda.github.io/schemas/cartes/parole.html) | `philo` & `HLP` | 
 | [Langage et communication](https://rollauda.github.io/schemas/cartes/langage.html) | `philo` & `HLP` | 
 | [Les caractéristiques du moi](https://rollauda.github.io/schemas/cartes/moi.html) | `HLP` & `philo` | 
 | [La sensibilité](https://rollauda.github.io/schemas/cartes/sensibilite.html) | `HLP` | 
