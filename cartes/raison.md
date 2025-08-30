@@ -4,16 +4,15 @@ markmap:
   initialExpandLevel: 2
 maxWidth: 600
 ---
-# **Raison** <!--fold-->
-  - *Faculté de penser rationnellement <br> et d'agir raisonnablement* <!--fold-->
-    - **être rationnel** <!--fold-->
-      - = penser de manière cohérente <!--fold-->
-             → distinguer le vrai du faux
-             => domaine de la connaissance
-    - **être raisonnable** <!--fold-->
-      - = bien agir <!--fold-->
-           → préférer le bien (moral) au mal
-           => domaine de l'action
-  - ≠ de folie
-
-    <!--fold-->
+# **<u>Raison</u>** (de *ratio*, calcul) = <br>faculté de penser  **rationnellement**  <br>et d'agir  **raisonnablement** <br>(contraire de folie) <!--fold-->
+  - ... **être rationnel :** 
+    = penser de manière cohérente 
+    → distinguer le vrai du faux
+    => domaine de la connaissance
+    (**raison théorique**)
+  - ... **être raisonnable :** <!--fold-->
+    = bien agir <!--fold-->
+    → préférer le bien (moral) au mal
+    => domaine de l'action
+    (**raison pratique**)
+ 
