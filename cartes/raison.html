@@ -1,28 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Markmap</title>
 <style>
 * {
   margin: 0;
   padding: 0;
 }
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 #mindmap {
   display: block;
   width: 100vw;
   height: 100vh;
 }
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
   const {
     markmap,
     mm
@@ -32,9 +40,16 @@
   } = markmap.Toolbar.create(mm);
   el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
   document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
-          const markmap = getMarkmap();
-          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
-        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1],"fold":1},"content":"<strong>Raison</strong> <!--fold-->","children":[{"type":"list_item","depth":1,"payload":{"lines":[1,2],"fold":1},"content":"<u>UNE</u> raison  <!--fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[2,3]},"content":"But, motif, <br> justification","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[3,4]},"content":"≠ d'absurde","children":[]}]},{"type":"list_item","depth":1,"payload":{"lines":[4,5],"fold":1},"content":"<u>LA</u> Raison <!--fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[5,6],"fold":1},"content":"<em>Faculté de juger</em> : <br>  théorique et pratique <!--fold-->","children":[{"type":"list_item","depth":3,"payload":{"lines":[6,7],"fold":1},"content":"<strong>Raison théorique</strong> <!--fold-->","children":[{"type":"list_item","depth":4,"payload":{"lines":[7,8]},"content":"<em>teoria</em> = contemplation","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[8,9]},"content":"domaine de la connaissance","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[9,10]},"content":"= être rationnel","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[10,11],"fold":1},"content":"=&gt; penser de manière cohérente <!--fold-->","children":[{"type":"list_item","depth":5,"payload":{"lines":[11,12]},"content":"→ distinguer le vrai du faux","children":[]},{"type":"list_item","depth":5,"payload":{"lines":[12,13]},"content":"→ distinguer le réel de l'illusoire","children":[]}]}]},{"type":"list_item","depth":3,"payload":{"lines":[13,14],"fold":1},"content":"<strong>Raison pratique</strong> <!--fold-->","children":[{"type":"list_item","depth":4,"payload":{"lines":[14,15]},"content":"<em>praxis</em> = action","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[15,16]},"content":"domaine de l'action","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[16,17]},"content":"= être raisonnable","children":[]},{"type":"list_item","depth":4,"payload":{"lines":[17,18],"fold":1},"content":"=&gt; bien agir <!--fold-->","children":[{"type":"list_item","depth":5,"payload":{"lines":[18,19]},"content":"→ préférer l'utile au nuisible","children":[]},{"type":"list_item","depth":5,"payload":{"lines":[19,20]},"content":"→ préférer le bien (moral) au mal","children":[]}]}]}]},{"type":"list_item","depth":2,"payload":{"lines":[20,21]},"content":"≠ de folie","children":[]}]}]},{})</script>
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<strong>Raison</strong> <!--fold-->","children":[{"content":"\n<p data-lines=\"7,8\"><em>Facult&#xe9; de penser rationnellement <br> et d&apos;agir raisonnablement</em> <!--fold--></p>","children":[{"content":"<strong>&#xea;tre rationnel</strong> <!--fold-->","children":[{"content":"= penser de mani&#xe8;re coh&#xe9;rente <!--fold--><br>\n&#x2192; distinguer le vrai du faux<br>\n=&gt; domaine de la connaissance","children":[],"payload":{"tag":"li","lines":"9,12"}}],"payload":{"tag":"li","lines":"8,12"}},{"content":"<strong>&#xea;tre raisonnable</strong> <!--fold-->","children":[{"content":"= bien agir <!--fold--><br>\n&#x2192; pr&#xe9;f&#xe9;rer le bien (moral) au mal<br>\n=&gt; domaine de l&apos;action","children":[],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"li","lines":"12,16"}}],"payload":{"tag":"li","lines":"7,16"}},{"content":"\n<p data-lines=\"16,17\">&#x2260; de folie</p>\n<!--fold-->","children":[],"payload":{"tag":"li","lines":"16,19"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
 </body>
 </html>
