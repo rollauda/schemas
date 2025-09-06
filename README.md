@@ -6,6 +6,7 @@
 |:-------------- |:--------------  
 | [Les sciences](https://rollauda.github.io/schemas/cartes/sciences.html) | `philo`  |
 | [La Raison](https://rollauda.github.io/schemas/cartes/raison.html) | `philo`  |
+| [Le Bonheur](https://rollauda.github.io/schemas/cartes/bonheur.html) | `philo`  |
 | [L'image des tonneaux percés (Platon)](https://rollauda.github.io/schemas/cartes/schema-tonneaux.png) | `philo`  |
 | [Les désirs chez Épicure](https://rollauda.github.io/schemas/cartes/desirs-epicure.html) | `philo`  |
 | [L'image du pendule (Schopenhauer)](https://rollauda.github.io/schemas/cartes/pendule.png) | `philo`  |

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<strong>Bonheur</strong>","children":[{"content":"<strong>&#xc9;tat de satisfaction compl&#xe8;te, <br> stable et durable</strong> <!--fold-->","children":[{"content":"<strong>&#x2260; du plaisir</strong> (<strong>sensation</strong> agr&#xe9;able, <br> eph&#xe9;m&#xe8;re, + ou - intense,  due &#xe0; la <br> satisfaction d&apos;un besoin ou d&apos;un d&#xe9;sir)","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"=&gt; bonheur = un <strong>jugement</strong> que nous <br> portons  sur notre existence quand <br> nos objectifs sont atteints","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"7,10"}},{"content":"<strong>But de l&apos;existence<br> <em>(eud&#xe9;monisme)</em></strong><!--fold-->","children":[{"content":"Blaise Pascal : &quot;<em>Tout les hommes recherchent<br>  d&apos;&#xea;tre heureux. M&#xea;me ceux qui se pendent.</em>&quot;","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"=&gt; obtenir le bonheur ou &#xe9;viter le malheur = <br> finalit&#xe9; de nos existences","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"10,13"}},{"content":"<strong>Sort favorable</strong><!--fold-->","children":[{"content":"<em>bonum</em> / <em>augurium</em> + <em>bon</em> / <em>heur</em> <br> = bon pr&#xe9;sage, chance","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"=&gt; Le bonheur ne d&#xe9;pend pas <br> enti&#xe8;rement de nous, mais <br> des circonstances et du hasard","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"Sophocle : &quot;<em>Ne proclamons heureux <br> nul homme avant sa mort.&quot;</em>","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"=&gt; le bonheur se juge &#xe0; la fin, quand <br> aucun accident ne peut plus survenir","children":[],"payload":{"tag":"li","lines":"17,18"}}],"payload":{"tag":"li","lines":"13,18"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
+</body>
+</html>
