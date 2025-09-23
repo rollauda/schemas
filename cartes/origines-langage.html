@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<strong>Les origines du langage</strong> <br> <a href=\"https://www.youtube.com/watch?v=gmC6x7jfpBg&amp;t=113s\">Conf&#xe9;rence</a> de Bernard Victorri","children":[{"content":"<strong>Quand et comment</strong><br> est apparu le langage&#xa0;? <!--fold-->","children":[{"content":"<strong>Homo erectus</strong> <br> (-1,5 million d&apos;ann&#xe9;es) <br> Premier hominid&#xe9; &#xe0; <br>quitter l&apos;Afrique","children":[{"content":"Outils, feu, cerveau + gros","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<strong>Hypoth&#xe8;se de D. Bickerton</strong> : <br>apparition d&apos;un <strong>proto-langage</strong> <br>(lexique sans syntaxe) =&gt; d&#xe9;signer <br>des objets, cat&#xe9;goriser le r&#xe9;el","children":[],"payload":{"tag":"li","lines":"10,11"}}],"payload":{"tag":"li","lines":"8,11"}},{"content":"<strong>Homo Sapiens</strong> <br> (-300 000 ans)","children":[{"content":"Explosion d&#xe9;mographique <br>+ occupe la terre enti&#xe8;re","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"<strong>Hypoth&#xe8;se de D. Bickerton</strong> : <br>apparition d&apos;un <strong>langage syntaxique</strong>, <br>complexification du langage","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"<strong>3 propri&#xe9;t&#xe9;s <br> du langage <br>syntaxique</strong>","children":[{"content":"<strong>R&#xe9;cursivit&#xe9;</strong>&#xa0;: embo&#xee;ter <br>des propositions","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"<strong>Temporalit&#xe9;</strong> : situer les <br>propositions dans le temps","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<strong>Modalit&#xe9;</strong> : nuancer les<br> propositions (<em>peut-&#xea;tre</em>, <em>il faudrait</em>...)","children":[],"payload":{"tag":"li","lines":"17,18"}}],"payload":{"tag":"li","lines":"14,18"}}],"payload":{"tag":"li","lines":"11,18"}}],"payload":{"tag":"li","lines":"7,18"}},{"content":"<strong>Pourquoi&#xa0;?</strong> Fonction du langage <br>syntaxique (homo sapiens) ? <!--fold-->","children":[{"content":"<strong>Hypoth&#xe8;se 1 (fausse)</strong> : <br>complexification des outils <br>donc besoin d&apos;apprentissage. <br><strong>Non</strong> : montrer suffit (exemple : chimpanz&#xe9;s)","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"<strong>Hypoth&#xe8;se 2 (fausse)</strong> : <br>la chasse en groupe, coordonner les strat&#xe9;gies. <br><strong>Non</strong> : chasser se fait sans parler","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"<strong>Hypoth&#xe8;se 3 (vraie) : <br>le langage cr&#xe9;e des r&#xe9;cits <br>qui fondent les soci&#xe9;t&#xe9;s</strong>","children":[{"content":"<strong>Mythes fondateurs</strong> : <br>raconter les origines, &#xe9;tablir <br>les grandes r&#xe8;gles sociales <br> et cr&#xe9;er une coh&#xe9;sion sociale","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"<strong>Humain</strong> : animal qui se lib&#xe8;re de la nature <br>gr&#xe2;ce &#xe0; la parole en racontant une histoire <br>commune  et en rempla&#xe7;ant les lois naturelles <br>par des r&#xe8;gles sociales, culturelles","children":[],"payload":{"tag":"li","lines":"23,24"}}],"payload":{"tag":"li","lines":"21,24"}}],"payload":{"tag":"li","lines":"18,24"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
+</body>
+</html>
