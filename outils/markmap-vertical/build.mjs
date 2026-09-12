@@ -14,7 +14,7 @@ export function construire(source, sortie = 'dist', nom = basename(source, '.md'
     console.warn(`  ${basename(source)} : fonctions non embarquées : ${Object.keys(features).join(', ')}`);
   }
   const titre = frontmatter?.title || nom;
-  const options = { direction: 'TB', ...frontmatter?.markmap };
+  const options = { direction: 'TB', initialExpandLevel: 2, ...frontmatter?.markmap };
   const json = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
 
   const html = `<!doctype html>

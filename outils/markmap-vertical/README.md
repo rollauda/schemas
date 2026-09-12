@@ -18,7 +18,7 @@ Règles de `build-all.mjs` : un `.html` est régénéré depuis le `.md` de mêm
 
 Même syntaxe que markmap. En tête du `.md`, dans le bloc `markmap:` :
 
-- `initialExpandLevel: 2` — niveaux dépliés à l'ouverture ;
+- `initialExpandLevel` — niveaux dépliés à l'ouverture (défaut : 2, la racine et ses branches ; « Tout replier » y ramène) ;
 - `direction: LR` — garder la carte à l'horizontale (défaut : `TB`, vertical).
 
 ## Dans la page

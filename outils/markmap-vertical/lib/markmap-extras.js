@@ -52,9 +52,17 @@
       appliquer();
     };
 
+    const toutDeplie = () => {
+      let plie = false;
+      parcourir(mm.state.data, (n) => { if (n.children?.length && n.payload?.fold) plie = true; });
+      return !plie;
+    };
+
+    // Replier ramène au niveau d'ouverture de la carte (initialExpandLevel), déplier ouvre tout.
     function replier(fold) {
+      const niveau = fold ? Math.max(1, mm.options.initialExpandLevel > 0 ? mm.options.initialExpandLevel : PROFONDEUR_TROUS) : 1;
       parcourir(mm.state.data, (n) => {
-        if (n.children?.length && (fold === 0 || n.state.depth >= PROFONDEUR_TROUS)) n.payload = { ...n.payload, fold };
+        if (n.children?.length && n.state.depth >= niveau) n.payload = { ...n.payload, fold };
       });
       return mm.renderData();
     }
@@ -112,9 +120,7 @@
       mm.fit();
     });
     bouton('deplier', async () => {
-      const toutDeplie = boutons.deplier.dataset.deplie === '1';
-      await replier(toutDeplie ? 1 : 0);
-      boutons.deplier.dataset.deplie = toutDeplie ? '0' : '1';
+      await replier(toutDeplie() ? 1 : 0);
       mm.fit();
     });
     bouton('trous', () => {
@@ -145,7 +151,7 @@
 
     function majBarre() {
       boutons.sens.textContent = mm.options.direction === 'TB' ? 'Horizontal' : 'Vertical';
-      boutons.deplier.textContent = boutons.deplier.dataset.deplie === '1' ? 'Tout replier' : 'Tout déplier';
+      boutons.deplier.textContent = toutDeplie() ? 'Tout replier' : 'Tout déplier';
       boutons.trous.textContent = 'À trous';
       boutons.trous.setAttribute('aria-pressed', etat.trous);
       boutons.pas.textContent = 'Pas à pas';
@@ -198,10 +204,7 @@
     });
 
     await mm.setData(racine);
-    if (params.has('deplier')) {
-      boutons.deplier.dataset.deplie = '1';
-      await replier(0);
-    }
+    if (params.has('deplier')) await replier(0);
     await mm.fit();
   }
 
