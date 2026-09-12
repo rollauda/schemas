@@ -91,6 +91,7 @@ svg.markmap .markmap-node[data-masque] > .markmap-foreign {
 }
 .mm-barre button {
   font: inherit;
+  min-width: 2.2em;
   color: var(--texte);
   background: transparent;
   border: 1px solid var(--barre-bord);

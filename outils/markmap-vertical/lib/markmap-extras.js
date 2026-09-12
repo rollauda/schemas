@@ -1,11 +1,12 @@
-/* Surcouche pédagogique pour markmap-view-vertical : orientation, schéma à trous, pas à pas, impression.
-   Paramètres d'URL (utiles pour les iframes) : ?sens=TB|LR · ?deplier · ?trous */
+/* Surcouche pédagogique pour markmap-view-vertical : orientation, schéma à trous, impression.
+   Paramètres d'URL (utiles pour les iframes) : ?sens=TB|LR · ?deplier · ?revele (ouvre sans trous) */
 (function () {
   const ESPACEMENTS = {
     TB: { spacingHorizontal: 18, spacingVertical: 46 },
     LR: { spacingHorizontal: 80, spacingVertical: 5 },
   };
   const PROFONDEUR_TROUS = 2; // la racine (profondeur 1) reste toujours visible
+  const FACTEUR_ZOOM = 1.25;
 
   function parcourir(noeud, fn, parent) {
     fn(noeud, parent);
@@ -19,19 +20,22 @@
 
     const mm = markmap.Markmap.create(svg, markmap.deriveOptions({ ...ESPACEMENTS[sens], ...optionsJSON, direction: sens }));
     window.mm = mm;
-    const etat = { trous: params.has('trous'), pasAPas: false, reveles: new Set(), pile: [] };
+    // trous : mode actif ; reveles : chemins des nœuds révélés ; pile : ordre des révélations (pour ←)
+    const etat = { trous: !params.has('revele'), reveles: new Set(), pile: [] };
 
     // Motif hachuré des trous (SVG : imprimé tel quel, et le texte masqué n'est plus dans le PDF)
     mm.svg.insert('defs', ':first-child').html(
       '<pattern id="mm-hachures" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">' +
       '<rect width="10" height="10" class="mm-hachure-fond"/><rect width="4" height="10" class="mm-hachure-trait"/></pattern>');
 
+    const estTrou = (n) => n.state.depth >= PROFONDEUR_TROUS;
+    const estMasque = (n) => etat.trous && estTrou(n) && !etat.reveles.has(n.state.path);
+
     function appliquer() {
       const { paddingX } = mm.options;
       mm.g.selectAll('g.markmap-node').each(function (d) {
         this.style.setProperty('--c', mm.options.color(d));
-        const masque = etat.trous && d.state.depth >= PROFONDEUR_TROUS && !etat.reveles.has(d.state.path);
-        this.toggleAttribute('data-masque', masque);
+        this.toggleAttribute('data-masque', estMasque(d));
         let trou = d3.select(this).select(':scope > rect.mm-trou');
         if (trou.empty()) trou = d3.select(this).insert('rect', 'foreignObject').attr('class', 'mm-trou');
         trou
@@ -57,6 +61,11 @@
       parcourir(mm.state.data, (n) => { if (n.children?.length && n.payload?.fold) plie = true; });
       return !plie;
     };
+    const toutRevele = () => {
+      let masque = false;
+      parcourir(mm.state.data, (n) => { if (estMasque(n)) masque = true; });
+      return !masque;
+    };
 
     // Replier ramène au niveau d'ouverture de la carte (initialExpandLevel), déplier ouvre tout.
     function replier(fold) {
@@ -67,17 +76,21 @@
       return mm.renderData();
     }
 
-    async function suivant() {
-      const liste = [];
-      const parents = new Map();
-      parcourir(mm.state.data, (n, p) => {
-        if (p) parents.set(n, p);
-        if (n.state.depth >= PROFONDEUR_TROUS) liste.push(n);
-      });
-      const n = liste.find((x) => !etat.reveles.has(x.state.path));
-      if (!n) return;
+    function reveler(n) {
       etat.reveles.add(n.state.path);
       etat.pile.push(n.state.path);
+    }
+
+    // → : révèle le prochain trou dans l'ordre de lecture, en dépliant sa branche si besoin
+    async function suivant() {
+      const parents = new Map();
+      let n;
+      parcourir(mm.state.data, (x, p) => {
+        if (p) parents.set(x, p);
+        if (!n && estMasque(x)) n = x;
+      });
+      if (!n) return;
+      reveler(n);
       let deplie = false;
       for (let a = parents.get(n); a; a = parents.get(a)) {
         if (a.payload?.fold) {
@@ -94,6 +107,7 @@
       }
     }
 
+    // ← : recache le dernier nœud révélé (par flèche ou par clic)
     function precedent() {
       const chemin = etat.pile.pop();
       if (!chemin) return;
@@ -106,9 +120,10 @@
     barre.className = 'mm-barre';
     barre.setAttribute('aria-label', 'Outils de la carte');
     const boutons = {};
-    function bouton(cle, action) {
+    function bouton(cle, action, titre) {
       const b = document.createElement('button');
       b.type = 'button';
+      if (titre) b.title = titre;
       b.addEventListener('click', action);
       barre.append(b);
       boutons[cle] = b;
@@ -125,25 +140,23 @@
     });
     bouton('trous', () => {
       etat.trous = !etat.trous;
-      etat.pasAPas = false;
       etat.reveles.clear();
       etat.pile = [];
       appliquer();
-    });
-    bouton('pas', () => {
-      etat.pasAPas = !etat.pasAPas;
-      etat.trous = etat.pasAPas || etat.trous;
-      etat.reveles.clear();
-      etat.pile = [];
-      appliquer();
-    });
+    }, 'Masquer les nœuds ; clic ou → pour les révéler, ← pour recacher');
     bouton('reveler', () => {
-      parcourir(mm.state.data, (n) => etat.reveles.add(n.state.path));
-      etat.pasAPas = false;
+      if (toutRevele()) {
+        etat.reveles.clear();
+        etat.pile = [];
+      } else {
+        parcourir(mm.state.data, (n) => { if (estTrou(n)) etat.reveles.add(n.state.path); });
+      }
       appliquer();
     });
-    bouton('ajuster', () => mm.fit());
-    bouton('imprimer', () => window.print());
+    bouton('moins', () => mm.rescale(1 / FACTEUR_ZOOM), 'Rapetisser');
+    bouton('plus', () => mm.rescale(FACTEUR_ZOOM), 'Agrandir');
+    bouton('ajuster', () => mm.fit(), 'Ajuster la carte à la fenêtre');
+    bouton('imprimer', () => window.print(), 'À trous + imprimer = fiche à compléter');
     const aide = document.createElement('span');
     aide.className = 'mm-aide';
     barre.append(aide);
@@ -154,34 +167,37 @@
       boutons.deplier.textContent = toutDeplie() ? 'Tout replier' : 'Tout déplier';
       boutons.trous.textContent = 'À trous';
       boutons.trous.setAttribute('aria-pressed', etat.trous);
-      boutons.pas.textContent = 'Pas à pas';
-      boutons.pas.setAttribute('aria-pressed', etat.pasAPas);
-      boutons.reveler.textContent = 'Tout révéler';
+      boutons.reveler.textContent = toutRevele() ? 'Tout cacher' : 'Tout révéler';
       boutons.reveler.hidden = !etat.trous;
+      boutons.moins.textContent = '−';
+      boutons.plus.textContent = '+';
       boutons.ajuster.textContent = 'Ajuster';
       boutons.imprimer.textContent = 'Imprimer';
-      aide.textContent = etat.pasAPas ? `→ suivant · ← retour (${etat.pile.length})` : etat.trous ? 'Cliquer un trou pour le révéler' : '';
+      aide.textContent = etat.trous ? '→ révéler · ← recacher · ou cliquer un trou' : '';
     }
 
-    // Clic sur un nœud en mode à trous : révèle, ou remasque un nœud déjà révélé (les liens restent cliquables).
+    // Clic sur un nœud en mode à trous : révèle, ou recache un nœud déjà révélé (les liens restent cliquables).
     svg.addEventListener('click', (e) => {
       if (!etat.trous || e.target.closest('circle')) return;
       const g = e.target.closest('g.markmap-node');
       if (!g) return;
       const d = d3.select(g).datum();
-      if (d.state.depth < PROFONDEUR_TROUS) return;
+      if (!estTrou(d)) return;
       if (g.hasAttribute('data-masque')) {
-        etat.reveles.add(d.state.path);
+        reveler(d);
       } else if (e.target.closest('a')) {
         return;
       } else {
         etat.reveles.delete(d.state.path);
+        etat.pile = etat.pile.filter((c) => c !== d.state.path);
       }
       appliquer();
     });
 
     document.addEventListener('keydown', (e) => {
-      if (!etat.pasAPas) return;
+      if (e.key === '+' || e.key === '=') return mm.rescale(FACTEUR_ZOOM);
+      if (e.key === '-') return mm.rescale(1 / FACTEUR_ZOOM);
+      if (!etat.trous) return;
       if (e.key === 'ArrowRight' || e.key === ' ') {
         e.preventDefault();
         suivant();
