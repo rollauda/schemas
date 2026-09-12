@@ -23,9 +23,9 @@ Même syntaxe que markmap. En tête du `.md`, dans le bloc `markmap:` :
 
 ## Dans la page
 
-Boutons : Horizontal/Vertical · Tout déplier/replier · À trous (actif à l'ouverture : les nœuds sont masqués ; clic ou → pour révéler, ← pour recacher) · Tout révéler/cacher · − + (zoom, aussi au clavier) · Ajuster · Imprimer (à trous + imprimer = fiche à compléter, le texte masqué n'est pas dans le PDF).
+Boutons : Horizontal/Vertical · Tout déplier/replier · Pas à pas (actif à l'ouverture : les nœuds sont cachés ; clic ou → pour révéler, ← pour recacher) · Tout cacher/révéler (hors pas à pas, « Tout cacher » y entre) · − + (zoom, aussi au clavier) · Ajuster · Imprimer (pas à pas + imprimer = fiche à compléter, le texte masqué n'est pas dans le PDF).
 
-Paramètres d'URL, utiles en iframe : `?deplier` · `?revele` (ouvre sans trous) · `?sens=LR`.
+Paramètres d'URL, utiles en iframe : `?deplier` · `?revele` (ouvre sans pas à pas) · `?sens=LR`.
 
 ## Fichiers
 

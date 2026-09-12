@@ -143,9 +143,14 @@
       etat.reveles.clear();
       etat.pile = [];
       appliquer();
-    }, 'Masquer les nœuds ; clic ou → pour les révéler, ← pour recacher');
+    }, 'Cacher les nœuds, puis les révéler un à un : clic ou →, ← pour recacher');
+    // Hors mode pas à pas, « Tout cacher » y entre ; dedans, il alterne avec « Tout révéler ».
     bouton('reveler', () => {
-      if (toutRevele()) {
+      if (!etat.trous) {
+        etat.trous = true;
+        etat.reveles.clear();
+        etat.pile = [];
+      } else if (toutRevele()) {
         etat.reveles.clear();
         etat.pile = [];
       } else {
@@ -156,7 +161,7 @@
     bouton('moins', () => mm.rescale(1 / FACTEUR_ZOOM), 'Rapetisser');
     bouton('plus', () => mm.rescale(FACTEUR_ZOOM), 'Agrandir');
     bouton('ajuster', () => mm.fit(), 'Ajuster la carte à la fenêtre');
-    bouton('imprimer', () => window.print(), 'À trous + imprimer = fiche à compléter');
+    bouton('imprimer', () => window.print(), 'Pas à pas + imprimer = fiche à compléter');
     const aide = document.createElement('span');
     aide.className = 'mm-aide';
     barre.append(aide);
@@ -165,15 +170,14 @@
     function majBarre() {
       boutons.sens.textContent = mm.options.direction === 'TB' ? 'Horizontal' : 'Vertical';
       boutons.deplier.textContent = toutDeplie() ? 'Tout replier' : 'Tout déplier';
-      boutons.trous.textContent = 'À trous';
+      boutons.trous.textContent = 'Pas à pas';
       boutons.trous.setAttribute('aria-pressed', etat.trous);
-      boutons.reveler.textContent = toutRevele() ? 'Tout cacher' : 'Tout révéler';
-      boutons.reveler.hidden = !etat.trous;
+      boutons.reveler.textContent = !etat.trous || toutRevele() ? 'Tout cacher' : 'Tout révéler';
       boutons.moins.textContent = '−';
       boutons.plus.textContent = '+';
       boutons.ajuster.textContent = 'Ajuster';
       boutons.imprimer.textContent = 'Imprimer';
-      aide.textContent = etat.trous ? '→ révéler · ← recacher · ou cliquer un trou' : '';
+      aide.textContent = etat.trous ? '→ révéler · ← recacher · ou cliquer un nœud caché' : '';
     }
 
     // Clic sur un nœud en mode à trous : révèle, ou recache un nœud déjà révélé (les liens restent cliquables).
