@@ -2,6 +2,8 @@
 
 Moteur des cartes de `cartes/` : [markmap-view 0.18.12](https://github.com/markmap/markmap) modifié pour dessiner de haut en bas, plus une surcouche pédagogique (schéma à trous, pas à pas, impression). Aucun CDN : tout est servi depuis `cartes/lib/`.
 
+En vertical, les **feuilles** (nœuds sans enfants) d'un même parent s'empilent en colonne, reliées par une ligne en équerre ; les nœuds qui ont des enfants restent côte à côte. Cela divise la largeur des cartes par 2 à 3 (`nature` : 4 391 → 1 421 px).
+
 ## Régénérer les cartes
 
 ```bash
@@ -29,7 +31,7 @@ Paramètres d'URL, utiles en iframe : `?deplier` · `?trous` · `?sens=LR`.
 
 | Fichier | Rôle |
 |---|---|
-| `patch.mjs` | 16 remplacements contrôlés dans le bundle officiel → `lib/markmap-view-vertical.js` (généré, ne pas éditer). S'arrête en erreur si markmap a changé. |
+| `patch.mjs` | 21 remplacements contrôlés dans le bundle officiel → `lib/markmap-view-vertical.js` (généré, ne pas éditer). S'arrête en erreur si markmap a changé. |
 | `lib/markmap-extras.js` / `.css` | trous, pas à pas, impression, barre d'outils, thème sombre, cadres des nœuds |
 | `build.mjs` | `.md` → `.html` (embarque l'arbre JSON, copie `lib/`) |
 | `build-all.mjs` | boucle sur `cartes/` |

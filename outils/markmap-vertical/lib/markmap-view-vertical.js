@@ -1075,10 +1075,25 @@
       });
       const { lineWidth, paddingX, spacingHorizontal, spacingVertical } = this.options;
       const isTB = this.options.direction === "TB";
+      const PILE_RETRAIT = 22, PILE_ECART = 8;
+      const largeurNoeud = (n) => n.state.size[0] + (n.state.size[0] ? paddingX * 2 : 0);
       const layout = flextree({}).children((d) => {
         var _a;
-        if (!((_a = d.payload) == null ? void 0 : _a.fold)) return d.children;
+        if ((_a = d.payload) == null ? void 0 : _a.fold) return;
+        if (!isTB || !d.children || d.__pile) return d.children;
+        const feuilles = d.children.filter((k) => !(k.children && k.children.length));
+        if (feuilles.length < 2) return d.children;
+        const branches = d.children.filter((k) => k.children && k.children.length);
+        const position = d.children.slice(0, d.children.indexOf(feuilles[0])).filter((k) => k.children && k.children.length).length;
+        branches.splice(position, 0, { __pile: true, feuilles, state: { rect: { x: 0, y: 0, width: 0, height: 0 } } });
+        return branches;
       }).nodeSize((node) => {
+        if (node.data.__pile) {
+          const { feuilles } = node.data;
+          const largeur = Math.max(...feuilles.map(largeurNoeud)) + PILE_RETRAIT;
+          const hauteur = feuilles.reduce((s, f) => s + f.state.size[1], 0) + PILE_ECART * (feuilles.length - 1);
+          return [largeur, hauteur + spacingVertical];
+        }
         const [width, height] = node.data.state.size;
         if (isTB) return [width + (width ? paddingX * 2 : 0), height + spacingVertical];
         return [height, width + (width ? paddingX * 2 : 0) + spacingHorizontal];
@@ -1091,6 +1106,18 @@
       const fnodes = tree.descendants();
       fnodes.forEach((fnode) => {
         const node = fnode.data;
+        if (node.__pile) {
+          const x = fnode.x - fnode.xSize / 2;
+          let y = fnode.y;
+          node.state.rect = { x, y, width: fnode.xSize, height: fnode.ySize - spacingVertical };
+          node.feuilles.forEach((f) => {
+            f.state.rect = { x: x + PILE_RETRAIT, y, width: largeurNoeud(f), height: f.state.size[1] };
+            f.state.empile = { x: x + PILE_RETRAIT / 2, y: fnode.y };
+            y += f.state.size[1] + PILE_ECART;
+          });
+          return;
+        }
+        node.state.empile = null;
         node.state.rect = isTB ? {
           x: fnode.x - fnode.xSize / 2,
           y: fnode.y,
@@ -1313,9 +1340,17 @@
         ];
         return linkShape({ source: pathTarget, target: pathTarget });
       }).attr("stroke-width", 0).remove();
-      this.transition(mmPathMerge).attr("stroke", (d) => color(d.target)).attr("stroke-width", (d) => lineWidth(d.target)).attr("d", (d) => {
+      this.transition(mmPathMerge).attr("stroke", (d) => isTB && d.target.state.empile ? color(d.source) : color(d.target)).attr("stroke-width", (d) => lineWidth(d.target)).attr("d", (d) => {
         const origSource = d.source;
         const origTarget = d.target;
+        if (isTB && origTarget.state.empile) {
+          const sx = origSource.state.rect.x + origSource.state.rect.width / 2;
+          const sy = origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2;
+          const { x: px, y: py } = origTarget.state.empile;
+          const my = (sy + py) / 2;
+          const r = origTarget.state.rect;
+          return `M${sx},${sy}C${sx},${my},${px},${my},${px},${py}V${r.y + r.height / 2}H${r.x + paddingX}`;
+        }
         const source = isTB ? [
           origSource.state.rect.x + origSource.state.rect.width / 2,
           origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2

@@ -69,7 +69,25 @@ remplacer('lien-trace',
   `        const source = [\n          origSource.state.rect.x + origSource.state.rect.width,\n          origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2\n        ];\n        const target = [\n          origTarget.state.rect.x,\n          origTarget.state.rect.y + origTarget.state.rect.height + lineWidth(origTarget) / 2\n        ];`,
   `        const source = isTB ? [\n          origSource.state.rect.x + origSource.state.rect.width / 2,\n          origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2\n        ] : [\n          origSource.state.rect.x + origSource.state.rect.width,\n          origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2\n        ];\n        const target = isTB ? [\n          origTarget.state.rect.x + origTarget.state.rect.width / 2,\n          origTarget.state.rect.y\n        ] : [\n          origTarget.state.rect.x,\n          origTarget.state.rect.y + origTarget.state.rect.height + lineWidth(origTarget) / 2\n        ];`);
 
+// 5. Feuilles empilées (TB) : les enfants sans descendance d'un même parent forment une colonne,
+//    représentée dans flextree par un nœud synthétique `__pile` ; les branches restent côte à côte.
+remplacer('pile-constantes',
+  `      const isTB = this.options.direction === "TB";\n      const layout = flextree({})`,
+  `      const isTB = this.options.direction === "TB";\n      const PILE_RETRAIT = 22, PILE_ECART = 8;\n      const largeurNoeud = (n) => n.state.size[0] + (n.state.size[0] ? paddingX * 2 : 0);\n      const layout = flextree({})`);
+remplacer('pile-enfants',
+  `        if (!((_a = d.payload) == null ? void 0 : _a.fold)) return d.children;\n      }).nodeSize((node) => {\n        const [width, height] = node.data.state.size;\n        if (isTB) return [`,
+  `        if ((_a = d.payload) == null ? void 0 : _a.fold) return;\n        if (!isTB || !d.children || d.__pile) return d.children;\n        const feuilles = d.children.filter((k) => !(k.children && k.children.length));\n        if (feuilles.length < 2) return d.children;\n        const branches = d.children.filter((k) => k.children && k.children.length);\n        const position = d.children.slice(0, d.children.indexOf(feuilles[0])).filter((k) => k.children && k.children.length).length;\n        branches.splice(position, 0, { __pile: true, feuilles, state: { rect: { x: 0, y: 0, width: 0, height: 0 } } });\n        return branches;\n      }).nodeSize((node) => {\n        if (node.data.__pile) {\n          const { feuilles } = node.data;\n          const largeur = Math.max(...feuilles.map(largeurNoeud)) + PILE_RETRAIT;\n          const hauteur = feuilles.reduce((s, f) => s + f.state.size[1], 0) + PILE_ECART * (feuilles.length - 1);\n          return [largeur, hauteur + spacingVertical];\n        }\n        const [width, height] = node.data.state.size;\n        if (isTB) return [`);
+remplacer('pile-rects',
+  `        const node = fnode.data;\n        node.state.rect = isTB ? {`,
+  `        const node = fnode.data;\n        if (node.__pile) {\n          const x = fnode.x - fnode.xSize / 2;\n          let y = fnode.y;\n          node.state.rect = { x, y, width: fnode.xSize, height: fnode.ySize - spacingVertical };\n          node.feuilles.forEach((f) => {\n            f.state.rect = { x: x + PILE_RETRAIT, y, width: largeurNoeud(f), height: f.state.size[1] };\n            f.state.empile = { x: x + PILE_RETRAIT / 2, y: fnode.y };\n            y += f.state.size[1] + PILE_ECART;\n          });\n          return;\n        }\n        node.state.empile = null;\n        node.state.rect = isTB ? {`);
+remplacer('pile-lien',
+  `        const origSource = d.source;\n        const origTarget = d.target;\n        const source = isTB ? [`,
+  `        const origSource = d.source;\n        const origTarget = d.target;\n        if (isTB && origTarget.state.empile) {\n          const sx = origSource.state.rect.x + origSource.state.rect.width / 2;\n          const sy = origSource.state.rect.y + origSource.state.rect.height + lineWidth(origSource) / 2;\n          const { x: px, y: py } = origTarget.state.empile;\n          const my = (sy + py) / 2;\n          const r = origTarget.state.rect;\n          return \`M\${sx},\${sy}C\${sx},\${my},\${px},\${my},\${px},\${py}V\${r.y + r.height / 2}H\${r.x + paddingX}\`;\n        }\n        const source = isTB ? [`);
+remplacer('pile-couleur',
+  `this.transition(mmPathMerge).attr("stroke", (d) => color(d.target))`,
+  `this.transition(mmPathMerge).attr("stroke", (d) => isTB && d.target.state.empile ? color(d.source) : color(d.target))`);
+
 mkdirSync('lib', { recursive: true });
 writeFileSync(CIBLE,
   `/* markmap-view ${VERSION} modifié (option direction "TB") — GÉNÉRÉ par patch.mjs, ne pas éditer. */\n` + code);
-console.log(`${CIBLE} écrit (16 remplacements).`);
+console.log(`${CIBLE} écrit (21 remplacements).`);
