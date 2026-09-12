@@ -1,55 +1,16 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-.markmap-dark {
-  background: #27272a;
-  color: white;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
-              setTimeout(r);
-            })(function renderToolbar() {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                document.documentElement.classList.add("markmap-dark");
-              }
-            })(() => window.markmap,null,{"content":"<strong>Bonheur</strong>","children":[{"content":"<strong>&#xc9;tat de satisfaction  <br>compl&#xe8;te, stable et durable</strong> <!--fold-->","children":[{"content":"<strong>&#x2260; du plaisir</strong> (<strong>sensation</strong> agr&#xe9;able, <br> eph&#xe9;m&#xe8;re, + ou - intense,  due &#xe0; la <br> satisfaction d&apos;un besoin ou d&apos;un d&#xe9;sir)","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"=&gt; bonheur = un <strong>jugement</strong> que nous <br> portons  sur notre existence quand <br> nos objectifs sont atteints","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"7,10"}},{"content":"<strong>But de l&apos;existence<br> <em>(eud&#xe9;monisme)</em></strong><!--fold-->","children":[{"content":"<u>Blaise Pascal</u> : &quot;<em>Tout les hommes recherchent<br>  d&apos;&#xea;tre heureux. M&#xea;me ceux qui se pendent.</em>&quot;","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"=&gt; nous faisons tout pour obtenir <br>le bonheur ou &#xe9;viter le malheur","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"Bonheur = le <strong>&quot;souverain bien&quot;</strong>, le bien <br>qui guide et ordonne nos existences","children":[],"payload":{"tag":"li","lines":"13,14"}}],"payload":{"tag":"li","lines":"10,14"}},{"content":"<strong>Sort favorable</strong><!--fold-->","children":[{"content":"<em>bonum</em> / <em>augurium</em> + <em>bon</em> / <em>heur</em> <br> = bon pr&#xe9;sage, chance","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"=&gt; Le bonheur ne d&#xe9;pend pas <br> enti&#xe8;rement de nous, mais <br> des circonstances et du hasard","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<u>Sophocle</u> : &quot;<em>Ne proclamons heureux <br> nul homme avant sa mort.&quot;</em>","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"=&gt; le bonheur se juge &#xe0; la fin, quand <br> aucun accident ne peut plus survenir","children":[],"payload":{"tag":"li","lines":"18,19"}}],"payload":{"tag":"li","lines":"14,19"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>Bonheur\u003c/strong>","children":[{"content":"\u003cstrong>&#xc9;tat de satisfaction  \u003cbr>compl&#xe8;te, stable et durable\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cstrong>&#x2260; du plaisir\u003c/strong> (\u003cstrong>sensation\u003c/strong> agr&#xe9;able, \u003cbr> eph&#xe9;m&#xe8;re, + ou - intense,  due &#xe0; la \u003cbr> satisfaction d&apos;un besoin ou d&apos;un d&#xe9;sir)","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"=&gt; bonheur = un \u003cstrong>jugement\u003c/strong> que nous \u003cbr> portons  sur notre existence quand \u003cbr> nos objectifs sont atteints","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"7,10"}},{"content":"\u003cstrong>But de l&apos;existence\u003cbr> \u003cem>(eud&#xe9;monisme)\u003c/em>\u003c/strong>\u003c!--fold-->","children":[{"content":"\u003cu>Blaise Pascal\u003c/u> : &quot;\u003cem>Tout les hommes recherchent\u003cbr>  d&apos;&#xea;tre heureux. M&#xea;me ceux qui se pendent.\u003c/em>&quot;","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"=&gt; nous faisons tout pour obtenir \u003cbr>le bonheur ou &#xe9;viter le malheur","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"Bonheur = le \u003cstrong>&quot;souverain bien&quot;\u003c/strong>, le bien \u003cbr>qui guide et ordonne nos existences","children":[],"payload":{"tag":"li","lines":"13,14"}}],"payload":{"tag":"li","lines":"10,14"}},{"content":"\u003cstrong>Sort favorable\u003c/strong>\u003c!--fold-->","children":[{"content":"\u003cem>bonum\u003c/em> / \u003cem>augurium\u003c/em> + \u003cem>bon\u003c/em> / \u003cem>heur\u003c/em> \u003cbr> = bon pr&#xe9;sage, chance","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"=&gt; Le bonheur ne d&#xe9;pend pas \u003cbr> enti&#xe8;rement de nous, mais \u003cbr> des circonstances et du hasard","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"\u003cu>Sophocle\u003c/u> : &quot;\u003cem>Ne proclamons heureux \u003cbr> nul homme avant sa mort.&quot;\u003c/em>","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"=&gt; le bonheur se juge &#xe0; la fin, quand \u003cbr> aucun accident ne peut plus survenir","children":[],"payload":{"tag":"li","lines":"18,19"}}],"payload":{"tag":"li","lines":"14,19"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

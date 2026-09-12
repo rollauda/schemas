@@ -1,55 +1,16 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-.markmap-dark {
-  background: #27272a;
-  color: white;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
-              setTimeout(r);
-            })(function renderToolbar() {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                document.documentElement.classList.add("markmap-dark");
-              }
-            })(() => window.markmap,null,{"content":"<strong>Les branches du droit et <br> les juridictions fran&#xe7;aises</strong>","children":[{"content":"<strong>Droit public</strong> <!--fold-->","children":[{"content":"<em>Concerne les conflits entre <br> &#xc9;tat et&#xa0;: citoyens, associations,<br>  entreprises, fonctionnaires</em>","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"=&gt; Relation verticale <br> et int&#xe9;r&#xea;t g&#xe9;n&#xe9;ral","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<strong>Juridiction</strong> : tribunal administratif","children":[],"payload":{"tag":"li","lines":"10,11"}}],"payload":{"tag":"li","lines":"7,11"}},{"content":"<strong>Droit priv&#xe9;</strong> <!--fold-->","children":[{"content":"<em>Concerne les conflits <br> entre particuliers</em>","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"=&gt; Relation horizontale <br> et int&#xe9;r&#xea;t priv&#xe9;","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"<strong>Droit du travail</strong> (juridiction : <br>conseil des prud&apos;hommes)","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"<strong>Droit commercial</strong>  (juridiction : <br>tribunal de commerce)","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"<strong>Droit civil</strong> (juridiction : <br>tribunal judiciaire)","children":[],"payload":{"tag":"li","lines":"16,17"}}],"payload":{"tag":"li","lines":"11,17"}},{"content":"<strong>Droit mixte</strong> <!--fold-->","children":[{"content":"<em>Concerne les conflits entre particuliers <br> avec une incidence sur la soci&#xe9;t&#xe9;</em>","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"=&gt; Priv&#xe9; <strong>et</strong> public","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"Droit de l&apos;environnement","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"Droit de la sant&#xe9;","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"<strong>Droit p&#xe9;nal</strong>","children":[{"content":"<strong>Tribunal de police</strong> (contraventions)","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"<strong>Tribunal correctionnel</strong> (d&#xe9;lits)","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"<strong>Tribunal d&apos;assises</strong> (crimes)","children":[],"payload":{"tag":"li","lines":"25,27"}}],"payload":{"tag":"li","lines":"22,27"}}],"payload":{"tag":"li","lines":"17,27"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>Les branches du droit et \u003cbr> les juridictions fran&#xe7;aises\u003c/strong>","children":[{"content":"\u003cstrong>Droit public\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cem>Concerne les conflits entre \u003cbr> &#xc9;tat et&#xa0;: citoyens, associations,\u003cbr>  entreprises, fonctionnaires\u003c/em>","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"=&gt; Relation verticale \u003cbr> et int&#xe9;r&#xea;t g&#xe9;n&#xe9;ral","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"\u003cstrong>Juridiction\u003c/strong> : tribunal administratif","children":[],"payload":{"tag":"li","lines":"10,11"}}],"payload":{"tag":"li","lines":"7,11"}},{"content":"\u003cstrong>Droit priv&#xe9;\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cem>Concerne les conflits \u003cbr> entre particuliers\u003c/em>","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"=&gt; Relation horizontale \u003cbr> et int&#xe9;r&#xea;t priv&#xe9;","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"\u003cstrong>Droit du travail\u003c/strong> (juridiction : \u003cbr>conseil des prud&apos;hommes)","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"\u003cstrong>Droit commercial\u003c/strong>  (juridiction : \u003cbr>tribunal de commerce)","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"\u003cstrong>Droit civil\u003c/strong> (juridiction : \u003cbr>tribunal judiciaire)","children":[],"payload":{"tag":"li","lines":"16,17"}}],"payload":{"tag":"li","lines":"11,17"}},{"content":"\u003cstrong>Droit mixte\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cem>Concerne les conflits entre particuliers \u003cbr> avec une incidence sur la soci&#xe9;t&#xe9;\u003c/em>","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"=&gt; Priv&#xe9; \u003cstrong>et\u003c/strong> public","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"Droit de l&apos;environnement","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"Droit de la sant&#xe9;","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"\u003cstrong>Droit p&#xe9;nal\u003c/strong>","children":[{"content":"\u003cstrong>Tribunal de police\u003c/strong> (contraventions)","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"\u003cstrong>Tribunal correctionnel\u003c/strong> (d&#xe9;lits)","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"\u003cstrong>Tribunal d&apos;assises\u003c/strong> (crimes)","children":[],"payload":{"tag":"li","lines":"25,27"}}],"payload":{"tag":"li","lines":"22,27"}}],"payload":{"tag":"li","lines":"17,27"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

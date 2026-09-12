@@ -1,40 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>langage</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.4"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/index.umd.min.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const toolbar = new markmap.Toolbar();
-  toolbar.attach(mm);
-  const el = toolbar.render();
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
-        const markmap = getMarkmap();
-        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
-      })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2],"fold":1},"content":"Langage VS <br> communication ","children":[{"type":"heading","depth":1,"payload":{"lines":[2,3],"fold":1},"content":"Langage ","children":[{"type":"list_item","depth":2,"payload":{"lines":[3,5]},"content":"Exprime une idée à l'aide de <code>signes</code><br>\nex : une phrase, un poème"},{"type":"list_item","depth":2,"payload":{"lines":[5,6]},"content":"Provoque une <code>réponse</code> <br> ex : une conversation, une émotion"}]},{"type":"heading","depth":1,"payload":{"lines":[6,7],"fold":1},"content":"Communication ","children":[{"type":"list_item","depth":2,"payload":{"lines":[7,8]},"content":"Transmet un <code>signal</code> : <br> ex : un cri, ou une publicité"},{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"Provoque une <code>réaction</code>. <br> ex : de l'aide, un achat"}]}]},{})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"Langage VS \u003cbr> communication \u003c!--fold-->","children":[{"content":"Langage \u003c!--fold-->","children":[{"content":"Exprime une id&#xe9;e &#xe0; l&apos;aide de \u003ccode>signes\u003c/code>\u003cbr>\nex : une phrase, un po&#xe8;me","children":[],"payload":{"tag":"li","lines":"6,8"}},{"content":"Provoque une \u003ccode>r&#xe9;ponse\u003c/code> \u003cbr> ex : une conversation, une &#xe9;motion","children":[],"payload":{"tag":"li","lines":"8,9"}}],"payload":{"tag":"h2","lines":"5,6"}},{"content":"\u003cbr> Communication \u003c!--fold-->","children":[{"content":"Transmet un \u003ccode>signal\u003c/code>&#xa0;: \u003cbr> ex&#xa0;: un cri, ou une publicit&#xe9;","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Provoque une \u003ccode>r&#xe9;action\u003c/code>. \u003cbr> ex : de l&apos;aide, un achat","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"h2","lines":"9,10"}}],"payload":{"tag":"h1","lines":"4,5"}}, {"direction":"TB"});</script>
 </body>
 </html>

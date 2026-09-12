@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-            })(() => window.markmap,null,{"content":"<strong>Les caractéristiques <br> du Moi</strong>","children":[{"content":"<strong>Permanence</strong> <br> (ou ipséité) <!--fold-->","children":[{"content":"Je reste moi-même malgré les changements <br> dûs au temps qui passe","children":[],"payload":{"lines":"2,3"}},{"content":"<strong>Problème</strong> : suis-je le même à travers le temps ?","children":[],"payload":{"lines":"3,4"}}],"payload":{"lines":"1,4"}},{"content":"<strong>Identité</strong> <br> (ou unicité)<!--fold-->","children":[{"content":"Je suis moi-même, je suis unique, <br> je ne me confonds pas avec autrui","children":[],"payload":{"lines":"5,6"}},{"content":"<strong>Problème</strong> : suis-je unique, <br> qu’est-ce qui me distingue d’autrui ?","children":[],"payload":{"lines":"6,7"}}],"payload":{"lines":"4,7"}},{"content":"<strong>Unité</strong> <!--fold-->","children":[{"content":"Je suis “un” et pas deux ou trois en moi-même, <br> je ne suis qu’une seule personne","children":[],"payload":{"lines":"8,9"}},{"content":"<strong>Problème</strong> : suis-je une seule et même personne, <br>  ou puis-je être double ?","children":[],"payload":{"lines":"9,10"}}],"payload":{"lines":"7,10"}}],"payload":{"lines":"0,1"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>Les caract&#xe9;ristiques \u003cbr> du Moi\u003c/strong>","children":[{"content":"\u003cstrong>Permanence\u003c/strong> \u003cbr> (ou ips&#xe9;it&#xe9;) \u003c!--fold-->","children":[{"content":"Je reste moi-m&#xea;me malgr&#xe9; les changements \u003cbr> d&#xfb;s au temps qui passe","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"\u003cstrong>Probl&#xe8;me\u003c/strong> : suis-je le m&#xea;me &#xe0; travers le temps ?","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"7,10"}},{"content":"\u003cstrong>Identit&#xe9;\u003c/strong> \u003cbr> (ou unicit&#xe9;)\u003c!--fold-->","children":[{"content":"Je suis moi-m&#xea;me, je suis unique, \u003cbr> je ne me confonds pas avec autrui","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"\u003cstrong>Probl&#xe8;me\u003c/strong> : suis-je unique, \u003cbr> qu&#x2019;est-ce qui me distingue d&#x2019;autrui ?","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"10,13"}},{"content":"\u003cstrong>Unit&#xe9;\u003c/strong> \u003c!--fold-->","children":[{"content":"Je suis &#x201c;un&#x201d; et pas deux ou trois en moi-m&#xea;me, \u003cbr> je ne suis qu&#x2019;une seule personne","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"\u003cstrong>Probl&#xe8;me\u003c/strong> : suis-je une seule et m&#xea;me personne, \u003cbr>  ou puis-je &#xea;tre double ?","children":[],"payload":{"tag":"li","lines":"15,16"}}],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

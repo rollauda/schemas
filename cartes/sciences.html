@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
-              setTimeout(r);
-            })(function renderToolbar() {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-            })(() => window.markmap,null,{"content":"<strong>Les sciences <br> (du latin <em>scientia</em> : <br> connaissance, <br> savoir)</strong> <!--fold-->","children":[{"content":"<strong>- But</strong> : La v&#xe9;rit&#xe9; (expliquer <u><strong>comment</strong></u> fonctionne le monde =&gt; d&#xe9;couvrir des lois) <br> <strong>- Moyen</strong> : utiliser des m&#xe9;thodes de recherche rationnelles, objectives","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"<strong>Sciences formelles</strong> <br> (math&#xe9;matiques, logique) <!--fold-->","children":[{"content":"<strong><u>objet</u></strong> : des id&#xe9;es (nombres, formes, symboles, etc.)","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<strong><u>but</u></strong>","children":[{"content":"-&gt; d&#xe9;couvrir <strong>des v&#xe9;rit&#xe9;s de raison</strong> (v&#xe9;rit&#xe9;-coh&#xe9;rence)","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"-&gt; comprendre le fonctionnement de la raison humaine","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"10,13"}},{"content":"<strong><u>m&#xe9;thode</u> hypoth&#xe9;tico-d&#xe9;ductive</strong>","children":[{"content":"1: partent d&apos;axiomes <br>et postulats","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"2: font des d&#xe9;monstrations,<br> des d&#xe9;ductions","children":[],"payload":{"tag":"li","lines":"15,16"}}],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"li","lines":"8,16"}},{"content":"<strong>Sciences exp&#xe9;rimentales</strong> <br> (ou <strong>sciences de la nature</strong> : <br> biologique, physique, etc.) <!--fold-->","children":[{"content":"<strong><u>objet</u></strong> : des faits naturels (mati&#xe8;re, vie, etc.)","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"<strong><u>but</u></strong> :","children":[{"content":"-&gt; d&#xe9;couvrir <strong>des v&#xe9;rit&#xe9;s de fait</strong> (v&#xe9;rit&#xe9;-ad&#xe9;quation)","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"-&gt; formuler des lois de la nature <br>(l&apos;explication de la r&#xe9;gularit&#xe9; des ph&#xe9;nom&#xe8;nes naturels)","children":[],"payload":{"tag":"li","lines":"20,21"}}],"payload":{"tag":"li","lines":"18,21"}},{"content":"<strong><u>m&#xe9;thode</u> exp&#xe9;rimentale</strong>","children":[{"content":"1: partent d&apos;observations","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"2: &#xe9;mettent des hypoth&#xe8;ses","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"3: exp&#xe9;rimentent pour prouver <br>ces hypoth&#xe8;ses","children":[],"payload":{"tag":"li","lines":"24,25"}}],"payload":{"tag":"li","lines":"21,25"}}],"payload":{"tag":"li","lines":"16,25"}},{"content":"<strong>Sciences humaines</strong> <br> (anthropologie, sociologie,<br> &#xe9;conomie, histoire, etc.) <!--fold-->","children":[{"content":"<strong><u>objet</u></strong> : des faits humains","children":[],"payload":{"tag":"li","lines":"26,27"}},{"content":"<strong><u>but</u></strong> : comprendre les<br> comportements humains","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"&#x2192; m&#xea;me d&#xe9;marche que <br>les sciences de la nature...","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"... mais prennent en compte <br>la libert&#xe9; humaine","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"=&gt; lois statistiques","children":[],"payload":{"tag":"li","lines":"30,31"}}],"payload":{"tag":"li","lines":"25,31"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>Les sciences \u003cbr> (du latin \u003cem>scientia\u003c/em> : \u003cbr> connaissance, \u003cbr> savoir)\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cstrong>- But\u003c/strong> : La v&#xe9;rit&#xe9; (expliquer \u003cu>\u003cstrong>comment\u003c/strong>\u003c/u> fonctionne le monde =&gt; d&#xe9;couvrir des lois) \u003cbr> \u003cstrong>- Moyen\u003c/strong> : utiliser des m&#xe9;thodes de recherche rationnelles, objectives","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"\u003cstrong>Sciences formelles\u003c/strong> \u003cbr> (math&#xe9;matiques, logique) \u003c!--fold-->","children":[{"content":"\u003cstrong>\u003cu>objet\u003c/u>\u003c/strong> : des id&#xe9;es (nombres, formes, symboles, etc.)","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"\u003cstrong>\u003cu>but\u003c/u>\u003c/strong>","children":[{"content":"-&gt; d&#xe9;couvrir \u003cstrong>des v&#xe9;rit&#xe9;s de raison\u003c/strong> (v&#xe9;rit&#xe9;-coh&#xe9;rence)","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"-&gt; comprendre le fonctionnement de la raison humaine","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"10,13"}},{"content":"\u003cstrong>\u003cu>m&#xe9;thode\u003c/u> hypoth&#xe9;tico-d&#xe9;ductive\u003c/strong>","children":[{"content":"1: partent d&apos;axiomes \u003cbr>et postulats","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"2: font des d&#xe9;monstrations,\u003cbr> des d&#xe9;ductions","children":[],"payload":{"tag":"li","lines":"15,16"}}],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"li","lines":"8,16"}},{"content":"\u003cstrong>Sciences exp&#xe9;rimentales\u003c/strong> \u003cbr> (ou \u003cstrong>sciences de la nature\u003c/strong> : \u003cbr> biologique, physique, etc.) \u003c!--fold-->","children":[{"content":"\u003cstrong>\u003cu>objet\u003c/u>\u003c/strong> : des faits naturels (mati&#xe8;re, vie, etc.)","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"\u003cstrong>\u003cu>but\u003c/u>\u003c/strong> :","children":[{"content":"-&gt; d&#xe9;couvrir \u003cstrong>des v&#xe9;rit&#xe9;s de fait\u003c/strong> (v&#xe9;rit&#xe9;-ad&#xe9;quation)","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"-&gt; formuler des lois de la nature \u003cbr>(l&apos;explication de la r&#xe9;gularit&#xe9; des ph&#xe9;nom&#xe8;nes naturels)","children":[],"payload":{"tag":"li","lines":"20,21"}}],"payload":{"tag":"li","lines":"18,21"}},{"content":"\u003cstrong>\u003cu>m&#xe9;thode\u003c/u> exp&#xe9;rimentale\u003c/strong>","children":[{"content":"1: partent d&apos;observations","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"2: &#xe9;mettent des hypoth&#xe8;ses","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"3: exp&#xe9;rimentent pour prouver \u003cbr>ces hypoth&#xe8;ses","children":[],"payload":{"tag":"li","lines":"24,25"}}],"payload":{"tag":"li","lines":"21,25"}}],"payload":{"tag":"li","lines":"16,25"}},{"content":"\u003cstrong>Sciences humaines\u003c/strong> \u003cbr> (anthropologie, sociologie,\u003cbr> &#xe9;conomie, histoire, etc.) \u003c!--fold-->","children":[{"content":"\u003cstrong>\u003cu>objet\u003c/u>\u003c/strong> : des faits humains","children":[],"payload":{"tag":"li","lines":"26,27"}},{"content":"\u003cstrong>\u003cu>but\u003c/u>\u003c/strong> : comprendre les\u003cbr> comportements humains","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"&#x2192; m&#xea;me d&#xe9;marche que \u003cbr>les sciences de la nature...","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"... mais prennent en compte \u003cbr>la libert&#xe9; humaine","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"=&gt; lois statistiques","children":[],"payload":{"tag":"li","lines":"30,31"}}],"payload":{"tag":"li","lines":"25,31"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

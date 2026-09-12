@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-            })(() => window.markmap,null,{"content":"<strong>Déterminismes inconscients</strong> <br> (limitent le libre arbitre)","children":[{"content":"<strong>Déterminisme biologique</strong>  <!--fold-->","children":[{"content":"<strong>Cause des comportements</strong>&nbsp;: <br> facteurs biologiques","children":[{"content":"Génétique (exemple : <br><em>gène égoïste</em> de Dawkins)","children":[],"payload":{"lines":"3,4"}},{"content":"Mécanismes évolutifs (exemple : <br> instinct de conservation)","children":[],"payload":{"lines":"4,5"}}],"payload":{"lines":"2,5"}},{"content":"= <strong>réductionnisme</strong> <br> (tout s'explique par la biologie) <!--fold-->","children":[],"payload":{"lines":"5,6"}}],"payload":{"lines":"1,6"}},{"content":"<strong>Déterminisme social</strong> <!--fold-->","children":[{"content":"<strong>Cause des comportements</strong>&nbsp;: <br> facteurs socio-économiques <!--fold-->","children":[{"content":"<strong>Marx</strong>: les structures sociales déterminent la <br> conscience individuelle (pensées et comportements)","children":[],"payload":{"lines":"8,9"}},{"content":"<strong>Bourdieu</strong> : <em>habitus</em> (modes de vie déterminés socialement) <br> et <em>reproduction sociale</em> (héritage culturel limitant la liberté individuelle)","children":[],"payload":{"lines":"9,10"}}],"payload":{"lines":"7,10"}}],"payload":{"lines":"6,10"}},{"content":"<strong>Déterminisme psychique</strong> <!--fold-->","children":[{"content":"<strong>Cause des comportements</strong>&nbsp;: <br> pensées et désirs inconscients<br> <strong>=&gt; Psychanalyse</strong> (Freud)<!--fold-->","children":[{"content":"<strong>Science de l'Inconscient</strong> : <br> Ça, Moi et Sur-moi + Complexe d'Œdipe","children":[],"payload":{"lines":"12,13"}},{"content":"<strong>Thérapie</strong>&nbsp;: guérison des névroses et psychoses <br> en mettant à jour les conflits psychiques inconscients","children":[],"payload":{"lines":"13,14"}}],"payload":{"lines":"11,14"}}],"payload":{"lines":"10,14"}}],"payload":{"lines":"0,1"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>D&#xe9;terminismes inconscients\u003c/strong> \u003cbr> (limitent le libre arbitre)","children":[{"content":"\u003cstrong>D&#xe9;terminisme biologique\u003c/strong>  \u003c!--fold-->","children":[{"content":"\u003cstrong>Cause des comportements\u003c/strong>&#xa0;: \u003cbr> facteurs biologiques","children":[{"content":"G&#xe9;n&#xe9;tique (exemple : \u003cbr>\u003cem>g&#xe8;ne &#xe9;go&#xef;ste\u003c/em> de Dawkins)","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"M&#xe9;canismes &#xe9;volutifs (exemple : \u003cbr> instinct de conservation)","children":[],"payload":{"tag":"li","lines":"10,11"}}],"payload":{"tag":"li","lines":"8,11"}},{"content":"= \u003cstrong>r&#xe9;ductionnisme\u003c/strong> \u003cbr> (tout s&apos;explique par la biologie) \u003c!--fold-->","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"li","lines":"7,12"}},{"content":"\u003cstrong>D&#xe9;terminisme social\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cstrong>Cause des comportements\u003c/strong>&#xa0;: \u003cbr> facteurs socio-&#xe9;conomiques \u003c!--fold-->","children":[{"content":"\u003cstrong>Marx\u003c/strong>: les structures sociales d&#xe9;terminent la \u003cbr> conscience individuelle (pens&#xe9;es et comportements)","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"\u003cstrong>Bourdieu\u003c/strong> : \u003cem>habitus\u003c/em> (modes de vie d&#xe9;termin&#xe9;s socialement) \u003cbr> et \u003cem>reproduction sociale\u003c/em> (h&#xe9;ritage culturel limitant la libert&#xe9; individuelle)","children":[],"payload":{"tag":"li","lines":"15,16"}}],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"li","lines":"12,16"}},{"content":"\u003cstrong>D&#xe9;terminisme psychique\u003c/strong> \u003c!--fold-->","children":[{"content":"\u003cstrong>Cause des comportements\u003c/strong>&#xa0;: \u003cbr> pens&#xe9;es et d&#xe9;sirs inconscients\u003cbr> \u003cstrong>=&gt; Psychanalyse\u003c/strong> (Freud)\u003c!--fold-->","children":[{"content":"\u003cstrong>Science de l&apos;Inconscient\u003c/strong> : \u003cbr> &#xc7;a, Moi et Sur-moi + Complexe d&apos;&#x152;dipe","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"\u003cstrong>Th&#xe9;rapie\u003c/strong>&#xa0;: gu&#xe9;rison des n&#xe9;vroses et psychoses \u003cbr> en mettant &#xe0; jour les conflits psychiques inconscients","children":[],"payload":{"tag":"li","lines":"19,20"}}],"payload":{"tag":"li","lines":"17,20"}}],"payload":{"tag":"li","lines":"16,20"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

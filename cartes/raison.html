@@ -1,55 +1,16 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-.markmap-dark {
-  background: #27272a;
-  color: white;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>la raison</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
-              setTimeout(r);
-            })(function renderToolbar() {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                document.documentElement.classList.add("markmap-dark");
-              }
-            })(() => window.markmap,null,{"content":"<strong><u>Raison</u></strong> (de <em>ratio</em>, calcul) = <br>facult&#xe9; de penser  <strong>rationnellement</strong>  <br>et d&apos;agir  <strong>raisonnablement</strong> <br>(contraire de folie) <!--fold-->","children":[{"content":"... <strong>&#xea;tre rationnel :</strong><br>\n= penser de mani&#xe8;re coh&#xe9;rente<br>\n&#x2192; distinguer le vrai du faux<br>\n=&gt; domaine de la connaissance<br>\n(<strong>raison th&#xe9;orique</strong>)","children":[],"payload":{"tag":"li","lines":"7,12"}},{"content":"... <strong>&#xea;tre raisonnable :</strong><br>\n= bien agir<br>\n&#x2192; pr&#xe9;f&#xe9;rer le bien (moral) au mal<br>\n=&gt; domaine de l&apos;action<br>\n(<strong>raison pratique</strong>)","children":[],"payload":{"tag":"li","lines":"12,17"}}],"payload":{"tag":"h1","lines":"6,7"}},{"initialExpandLevel":1})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>\u003cu>Raison\u003c/u>\u003c/strong> (de \u003cem>ratio\u003c/em>, calcul) = \u003cbr>facult&#xe9; de penser  \u003cstrong>rationnellement\u003c/strong>  \u003cbr>et d&apos;agir  \u003cstrong>raisonnablement\u003c/strong> \u003cbr>(contraire de folie) \u003c!--fold-->","children":[{"content":"... \u003cstrong>&#xea;tre rationnel :\u003c/strong>\u003cbr>\n= penser de mani&#xe8;re coh&#xe9;rente\u003cbr>\n&#x2192; distinguer le vrai du faux\u003cbr>\n=&gt; domaine de la connaissance\u003cbr>\n(\u003cstrong>raison th&#xe9;orique\u003c/strong>)","children":[],"payload":{"tag":"li","lines":"7,12"}},{"content":"... \u003cstrong>&#xea;tre raisonnable :\u003c/strong>\u003cbr>\n= bien agir\u003cbr>\n&#x2192; pr&#xe9;f&#xe9;rer le bien (moral) au mal\u003cbr>\n=&gt; domaine de l&apos;action\u003cbr>\n(\u003cstrong>raison pratique\u003c/strong>)","children":[],"payload":{"tag":"li","lines":"12,17"}}],"payload":{"tag":"h1","lines":"6,7"}}, {"direction":"TB","initialExpandLevel":1});</script>
 </body>
 </html>

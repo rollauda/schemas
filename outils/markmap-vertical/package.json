@@ -1,0 +1,15 @@
+{
+  "name": "markmap-vertical",
+  "private": true,
+  "type": "module",
+  "description": "markmap-view modifié (option direction TB) + surcouche pédagogique, pour les cartes de ~/Github/schemas",
+  "scripts": {
+    "patch": "node patch.mjs",
+    "cartes": "node patch.mjs && node build-all.mjs ../../cartes"
+  },
+  "dependencies": {
+    "d3": "7.9.0",
+    "markmap-lib": "0.18.12",
+    "markmap-view": "0.18.12"
+  }
+}

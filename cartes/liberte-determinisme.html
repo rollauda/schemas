@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markmap</title>
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-              const markmap = getMarkmap();
-              window.mm = markmap.Markmap.create(
-                "svg#mindmap",
-                (getOptions || markmap.deriveOptions)(jsonOptions),
-                root2
-              );
-            })(() => window.markmap,null,{"content":"<strong>LIBERTÉ ET <br> DÉTERMINISME</strong>","children":[{"content":"<strong>Liberté</strong> <!--fold-->","children":[{"content":"Un <strong>sentiment</strong> <br> (nous nous sentons libres <br> de faire ce que nous voulons)","children":[],"payload":{"lines":"3,4"}},{"content":"<strong>Libre arbitre</strong>&nbsp;:  <!--fold-->","children":[{"content":"Avoir plusieurs choix","children":[],"payload":{"lines":"5,6"}},{"content":"+ notre volonté est cause première","children":[],"payload":{"lines":"6,7"}},{"content":"=&gt; décision <strong>contingente</strong> :  <br> je peux faire ou ne pas faire","children":[],"payload":{"lines":"7,8"}}],"payload":{"lines":"4,8"}}],"payload":{"lines":"2,8"}},{"content":"≠ <strong>Déterminisme</strong> <br> (une cause produit un effet  <br><strong>nécessaire</strong>&nbsp;: toujours le même)  <!--fold-->","children":[{"content":"<strong>Déterminisme naturel (scientifique)</strong>&nbsp;:  <br>tout dans l'Univers est un  enchaînement <br>de causes et d'effets nécessaires","children":[],"payload":{"lines":"9,10"}},{"content":"<strong>Déterminisme biologique</strong>&nbsp;:  <br>nos choix sont déterminés par  <br>des facteurs biologiques (gènes, évolution)","children":[],"payload":{"lines":"10,11"}},{"content":"<strong>Déterminisme social</strong>&nbsp;:  <br>nos choix sont déterminés par des  facteurs sociaux <br>(superstructure, <em>habitus</em>, reproduction sociale)","children":[],"payload":{"lines":"11,12"}},{"content":"<strong>Déterminisme psychique</strong>&nbsp;:  <br>nos choix sont déterminés par  <br>des causes mentales inconscientes","children":[],"payload":{"lines":"12,13"}},{"content":"Ces ≠ déterminismes sont <strong>inconscients</strong>&nbsp;:  <br> nous n'en avons pas connaissance <br>au moment de nos décisions","children":[],"payload":{"lines":"13,14"}}],"payload":{"lines":"8,14"}}],"payload":{"lines":"1,2"}},{"initialExpandLevel":2})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"\u003cstrong>LIBERT&#xc9; ET \u003cbr> D&#xc9;TERMINISME\u003c/strong>","children":[{"content":"\u003cstrong>Libert&#xe9;\u003c/strong> \u003c!--fold-->","children":[{"content":"Un \u003cstrong>sentiment\u003c/strong> \u003cbr> (nous nous sentons libres \u003cbr> de faire ce que nous voulons)","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"\u003cstrong>Libre arbitre\u003c/strong>&#xa0;:  \u003c!--fold-->","children":[{"content":"Avoir plusieurs choix","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"+ notre volont&#xe9; est cause premi&#xe8;re","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"=&gt; d&#xe9;cision \u003cstrong>contingente\u003c/strong> :  \u003cbr> je peux faire ou ne pas faire","children":[],"payload":{"tag":"li","lines":"13,14"}}],"payload":{"tag":"li","lines":"10,14"}}],"payload":{"tag":"li","lines":"8,14"}},{"content":"&#x2260; \u003cstrong>D&#xe9;terminisme\u003c/strong> \u003cbr> (une cause produit un effet  \u003cbr>\u003cstrong>n&#xe9;cessaire\u003c/strong>&#xa0;: toujours le m&#xea;me)  \u003c!--fold-->","children":[{"content":"\u003cstrong>D&#xe9;terminisme naturel (scientifique)\u003c/strong>&#xa0;:  \u003cbr>tout dans l&apos;Univers est un  encha&#xee;nement \u003cbr>de causes et d&apos;effets n&#xe9;cessaires","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"\u003cstrong>D&#xe9;terminisme biologique\u003c/strong>&#xa0;:  \u003cbr>nos choix sont d&#xe9;termin&#xe9;s par  \u003cbr>des facteurs biologiques (g&#xe8;nes, &#xe9;volution)","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"\u003cstrong>D&#xe9;terminisme social\u003c/strong>&#xa0;:  \u003cbr>nos choix sont d&#xe9;termin&#xe9;s par des  facteurs sociaux \u003cbr>(superstructure, \u003cem>habitus\u003c/em>, reproduction sociale)","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"\u003cstrong>D&#xe9;terminisme psychique\u003c/strong>&#xa0;:  \u003cbr>nos choix sont d&#xe9;termin&#xe9;s par  \u003cbr>des causes mentales inconscientes","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"Ces &#x2260; d&#xe9;terminismes sont \u003cstrong>inconscients\u003c/strong>&#xa0;:  \u003cbr> nous n&apos;en avons pas connaissance \u003cbr>au moment de nos d&#xe9;cisions","children":[],"payload":{"tag":"li","lines":"19,20"}}],"payload":{"tag":"li","lines":"14,20"}}],"payload":{"tag":"h1","lines":"7,8"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>

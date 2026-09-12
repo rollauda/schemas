@@ -1,40 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conscience</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+<link rel="stylesheet" href="lib/markmap-extras.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
-                setTimeout(r);
-              })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const {
-    el
-  } = markmap.Toolbar.create(mm);
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
-          const markmap = getMarkmap();
-          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
-        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2],"fold":1},"content":"CONSCIENCE <br> (lat. <em>cum scientia :</em> <br>accompagné <br>de savoir)  <!-- fold-->","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4],"fold":1},"content":"<strong>CS IMMÉDIATE</strong> <br> CS spontanée, <br>= <em>perception</em>  <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[4,5]},"content":"= CS animale, <br> présence au monde","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[5,6]},"content":"CONTRAIRE : <br> <strong>l'inconscience</strong>","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[7,8],"fold":1},"content":"<strong>CS RÉFLÉCHIE</strong> <br> CS de soi <br> = <em>aperception</em>  <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"= &quot;Moi&quot;, &quot;Je&quot;, penser à <br>la première personne","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[9,10]},"content":"CONTRAIRE : <br> <strong>l'Inconscient</strong>","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[11,12],"fold":1},"content":"<strong>CS MORALE</strong> <br> = <em>CS du bien <em><br></em>et du mal</em>  <!-- fold-->","children":[{"type":"list_item","depth":2,"payload":{"lines":[12,13]},"content":"= être auteur et <br>responsable <br>de ses actes","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[13,14]},"content":"CONTRAIRE : <br> <strong>L'inconscience (folie)</strong> <br> <strong>L'Inconscient (le <em>Ça</em>)</strong>","children":[]}]}]},{})</script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/markmap-view-vertical.js"></script>
+<script src="lib/markmap-extras.js"></script>
+<script>markmapExtras.demarrer(document.getElementById('mindmap'), {"content":"CONSCIENCE \u003cbr> (lat. \u003cem>cum scientia :\u003c/em> \u003cbr>accompagn&#xe9; \u003cbr>de savoir)  \u003c!-- fold-->","children":[{"content":"\u003cstrong>CS IMM&#xc9;DIATE\u003c/strong> \u003cbr> CS spontan&#xe9;e, \u003cbr>= \u003cem>perception\u003c/em>  \u003c!-- fold-->","children":[{"content":"= CS animale, \u003cbr> pr&#xe9;sence au monde","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"CONTRAIRE : \u003cbr> \u003cstrong>l&apos;inconscience\u003c/strong>","children":[],"payload":{"tag":"li","lines":"11,13"}}],"payload":{"tag":"h2","lines":"9,10"}},{"content":"\u003cstrong>CS R&#xc9;FL&#xc9;CHIE\u003c/strong> \u003cbr> CS de soi \u003cbr> = \u003cem>aperception\u003c/em>  \u003c!-- fold-->","children":[{"content":"= &quot;Moi&quot;, &quot;Je&quot;, penser &#xe0; \u003cbr>la premi&#xe8;re personne","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"CONTRAIRE : \u003cbr> \u003cstrong>l&apos;Inconscient\u003c/strong>","children":[],"payload":{"tag":"li","lines":"15,17"}}],"payload":{"tag":"h2","lines":"13,14"}},{"content":"\u003cstrong>CS MORALE\u003c/strong> \u003cbr> = *CS du bien *\u003cbr>\u003cem>et du mal\u003c/em>  \u003c!-- fold-->","children":[{"content":"= &#xea;tre auteur et \u003cbr>responsable \u003cbr>de ses actes","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"CONTRAIRE : \u003cbr> \u003cstrong>L&apos;inconscience (folie)\u003c/strong> \u003cbr> \u003cstrong>L&apos;Inconscient (le \u003cem>&#xc7;a\u003c/em>)\u003c/strong>","children":[],"payload":{"tag":"li","lines":"19,20"}}],"payload":{"tag":"h2","lines":"17,18"}}],"payload":{"tag":"h1","lines":"7,8"}}, {"direction":"TB","initialExpandLevel":2});</script>
 </body>
 </html>
