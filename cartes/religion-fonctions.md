@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 # **Pourquoi y a-t-il <br> des religions ?** <!-- fold-->
 - Raison psychologique  <!-- fold-->
   - L'humain seul dans le monde

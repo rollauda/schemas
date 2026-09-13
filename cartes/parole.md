@@ -2,7 +2,6 @@
 title: pourquoi parler
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Pourquoi parle-t-on ?** <br> Analyse de la question
 - Que signifie **"pourquoi"** ? <!--fold-->

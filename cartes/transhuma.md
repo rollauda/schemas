@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 
 # Le transhumanisme, ou l'umain augmenté
 

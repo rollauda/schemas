@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 
 # Plaisir <br> Joie <br> Bonheur 
 ## Plaisir <br> (sensation) <!--fold-->

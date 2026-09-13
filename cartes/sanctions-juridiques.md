@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 
 # Sanctions <br> Juridiques <!--fold-->
 

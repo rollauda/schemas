@@ -2,7 +2,6 @@
 title: markmap
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Bonheur**
 - **État de satisfaction  <br>complète, stable et durable** <!--fold-->

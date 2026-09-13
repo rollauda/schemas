@@ -1,5 +1,7 @@
 # markmap-vertical
 
+> Documentation complète (architecture, les 21 remplacements du patch, reproduction sur une autre machine, montée de version) : [DOCUMENTATION.md](DOCUMENTATION.md).
+
 Moteur des cartes de `cartes/` : [markmap-view 0.18.12](https://github.com/markmap/markmap) modifié pour dessiner de haut en bas, plus une surcouche pédagogique (schéma à trous, pas à pas, impression). Aucun CDN : tout est servi depuis `cartes/lib/`.
 
 En vertical, les **feuilles** (nœuds sans enfants) d'un même parent s'empilent en colonne, reliées par une ligne en équerre ; les nœuds qui ont des enfants restent côte à côte. Cela divise la largeur des cartes par 2 à 3 (`nature` : 4 391 → 1 421 px).
@@ -18,6 +20,7 @@ Règles de `build-all.mjs` : un `.html` est régénéré depuis le `.md` de mêm
 
 Même syntaxe que markmap. En tête du `.md`, dans le bloc `markmap:` :
 
+- les options vont **sous** `markmap:` (une clé à la racine du frontmatter est ignorée) ;
 - `initialExpandLevel` — niveaux dépliés à l'ouverture (défaut : 2, la racine et ses branches ; « Tout replier » y ramène) ;
 - `direction: LR` — garder la carte à l'horizontale (défaut : `TB`, vertical).
 

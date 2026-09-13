@@ -2,7 +2,6 @@
 title: Justice sociale
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Justice sociale**
 - **Justice corrective** <br> (universaliste) <!--fold-->

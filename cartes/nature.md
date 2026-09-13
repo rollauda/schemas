@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 # **NATURE...** <!--fold-->
 - **1. <u>Entité créatrice</u>** à l'origine des êtres naturels vivants <br> (animaux, plantes...)  et inertes (eau, terre, pierres, etc.) <!--fold-->
   - => Nature = Ensemble des choses <br> non fabriquées par les être humains

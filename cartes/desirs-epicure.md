@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 # Les désirs <br> chez Epicure <!--fold-->
 - Désirs naturels  <!--fold-->
   - nécessaires <!--fold-->

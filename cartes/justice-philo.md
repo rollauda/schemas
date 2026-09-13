@@ -2,7 +2,6 @@
 title: justice-philo
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **La Justice** <br>
 - **Principe moral** :  ce qui nous <br> semble légitime, moralement juste <!--fold-->

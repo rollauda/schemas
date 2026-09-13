@@ -2,7 +2,6 @@
 title: Justice sociale
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Justice sociale**
 - **Justice commutative** <br> (équilibre des droits et devoirs <br> des citoyens entre eux et envers l'État) <!--fold-->

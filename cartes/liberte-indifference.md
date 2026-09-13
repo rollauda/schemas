@@ -2,7 +2,6 @@
 title: markmap
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **LIBERTÉ D'INDIFFÉRENCE <br> *VS* LIBRE ARBITRE** <br> (RENÉ DESCARTES)
 - **Liberté d'indifférence** <!--fold-->

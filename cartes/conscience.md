@@ -2,7 +2,6 @@
 title: Conscience
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 
 # CONSCIENCE <br> (lat. *cum scientia :* <br>accompagné <br>de savoir)  <!-- fold-->

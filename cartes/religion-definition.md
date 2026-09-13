@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 # Qu'est-ce <br> qu'une religion ? <!--fold-->
 - **lien vertical ↑** <br> **homme/divinité** <br> profane/sacré <!--fold-->
   - **=> religion = <br> des croyances** <!--fold-->

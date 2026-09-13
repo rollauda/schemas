@@ -2,7 +2,6 @@
 title: Origines du langage
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Les origines du langage** <br> [Conférence](https://www.youtube.com/watch?v=gmC6x7jfpBg&t=113s) de Bernard Victorri
 - **Quand et comment**<br> est apparu le langage ? <!--fold-->

@@ -2,7 +2,6 @@
 title: markmap
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Déterminismes inconscients** <br> (limitent le libre arbitre)
 - **Déterminisme biologique**  <!--fold-->

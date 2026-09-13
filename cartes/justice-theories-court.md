@@ -2,7 +2,6 @@
 title: Théories de la justice
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Théories de la justice**
 - **Reposant d'abord <br>sur l'équité (= Droite)**

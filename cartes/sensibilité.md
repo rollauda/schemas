@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 # Sensibilité
 - **Sensations externes** <!--fold-->
   - Causées par des objets extérieurs

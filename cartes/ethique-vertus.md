@@ -2,7 +2,6 @@
 title: étique des vertus
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # Éthique des vertus
 - Éthique

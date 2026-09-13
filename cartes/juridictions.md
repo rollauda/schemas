@@ -2,7 +2,6 @@
 title: markmap
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Les branches du droit et <br> les juridictions françaises** 
 - **Droit public** <!--fold-->

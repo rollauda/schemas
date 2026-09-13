@@ -1,6 +1,3 @@
----
-maxWidth: 600
----
 
 # Langage VS <br> communication <!--fold-->
 ## Langage <!--fold-->

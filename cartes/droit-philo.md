@@ -2,7 +2,6 @@
 title: droit-philo
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # Racine
 - Le Droit <!--fold-->

@@ -2,7 +2,6 @@
 title: markmap
 markmap:
   initialExpandLevel: 2
-maxWidth: 600
 ---
 # **Les sciences <br> (du latin *scientia* : <br> connaissance, <br> savoir)** <!--fold-->
 - **- But** : La vérité (expliquer <u>**comment**</u> fonctionne le monde => découvrir des lois) <br> **- Moyen** : utiliser des méthodes de recherche rationnelles, objectives
